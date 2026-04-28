@@ -1,0 +1,34 @@
+name: Kripto Bot
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # Her 15 dakikada bir çalışır
+  workflow_dispatch:           # Manuel tetikleme (test için)
+
+permissions:
+  contents: write              # state.json'u repoya yazabilmek için
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Repoyu indir
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Botu çalıştır
+        run: node bot/bot.js
+
+      - name: Durumu kaydet
+        run: |
+          git config user.name  "Kripto Bot"
+          git config user.email "bot@kripto-bot"
+          git add state.json
+          git diff --cached --quiet || git commit -m "bot: durum güncellendi [skip ci]"
+          git push

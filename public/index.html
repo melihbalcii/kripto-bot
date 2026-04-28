@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kripto Bot Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1/dist/chartjs-adapter-luxon.umd.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">KriptoBot</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-page="positions">
+          <span class="nav-icon">📈</span> Pozisyonlar
+        </a>
+        <a href="#" class="nav-item" data-page="history">
+          <span class="nav-icon">📋</span> İşlem Geçmişi
+        </a>
+        <a href="#" class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙️</span> Ayarlar
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="mode-badge" id="modeBadge">
+          <span class="mode-dot"></span>
+          <span id="modeText">PAPER TRADING</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <h1 class="page-title" id="pageTitle">Dashboard</h1>
+          <span class="page-subtitle" id="pageSubtitle">Gerçek zamanlı piyasa verisi</span>
+        </div>
+        <div class="header-right">
+          <div class="bot-controls">
+            <button class="btn btn-danger" id="stopBtn" style="display:none">⏹ Durdur</button>
+            <button class="btn btn-success" id="startBtn">▶ Botu Başlat</button>
+          </div>
+          <div class="connection-status" id="connectionStatus">
+            <span class="conn-dot disconnected"></span>
+            <span>Bağlanıyor...</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Pages -->
+      <div class="pages">
+
+        <!-- DASHBOARD PAGE -->
+        <div class="page active" id="page-dashboard">
+          <!-- Stats Row -->
+          <div class="stats-grid">
+            <div class="stat-card primary">
+              <div class="stat-label">Toplam Bakiye</div>
+              <div class="stat-value" id="totalBalance">$100.00</div>
+              <div class="stat-change positive" id="totalPnl">+$0.00 (0.00%)</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Günlük P&L</div>
+              <div class="stat-value" id="dailyPnl">$0.00</div>
+              <div class="stat-change" id="dailyPnlPct">0.00%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Toplam İşlem</div>
+              <div class="stat-value" id="totalTrades">0</div>
+              <div class="stat-change" id="winRate">Kazanma: 0%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Aktif Pozisyon</div>
+              <div class="stat-value" id="activePositions">0</div>
+              <div class="stat-change" id="positionValue">$0.00 toplam</div>
+            </div>
+          </div>
+
+          <!-- Chart + Signals Row -->
+          <div class="content-row">
+            <div class="card chart-card">
+              <div class="card-header">
+                <h3>Bakiye Grafiği</h3>
+                <div class="chart-legend">
+                  <span class="legend-item"><span class="legend-dot green"></span>Bakiye</span>
+                  <span class="legend-item"><span class="legend-dot blue"></span>Hedef ($300)</span>
+                </div>
+              </div>
+              <canvas id="balanceChart"></canvas>
+            </div>
+
+            <div class="card signals-card">
+              <div class="card-header">
+                <h3>Son Sinyaller</h3>
+              </div>
+              <div class="signals-list" id="signalsList">
+                <div class="signal-empty">Sinyal bekleniyor...</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Market Prices -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Piyasa Fiyatları</h3>
+              <span class="live-badge">CANLI</span>
+            </div>
+            <div class="market-grid" id="marketGrid">
+              <!-- JS tarafından doldurulur -->
+            </div>
+          </div>
+        </div>
+
+        <!-- POSITIONS PAGE -->
+        <div class="page" id="page-positions">
+          <div class="card">
+            <div class="card-header">
+              <h3>Aktif Pozisyonlar</h3>
+            </div>
+            <div id="positionsContainer">
+              <div class="empty-state">Açık pozisyon yok</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HISTORY PAGE -->
+        <div class="page" id="page-history">
+          <div class="card">
+            <div class="card-header">
+              <h3>İşlem Geçmişi</h3>
+              <button class="btn btn-sm" id="clearHistoryBtn">Temizle</button>
+            </div>
+            <div class="table-wrapper">
+              <table class="trade-table">
+                <thead>
+                  <tr>
+                    <th>Zaman</th>
+                    <th>Coin</th>
+                    <th>Yön</th>
+                    <th>Giriş</th>
+                    <th>Çıkış</th>
+                    <th>Kaldıraç</th>
+                    <th>P&L</th>
+                    <th>Sebep</th>
+                  </tr>
+                </thead>
+                <tbody id="historyBody">
+                  <tr><td colspan="8" class="empty-row">Henüz işlem yok</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SETTINGS PAGE -->
+        <div class="page" id="page-settings">
+          <div class="settings-grid">
+            <div class="card">
+              <div class="card-header"><h3>Bot Ayarları</h3></div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label>Başlangıç Sermayesi (USDT)</label>
+                  <input type="number" id="initialBalance" value="100" min="10" />
+                </div>
+                <div class="form-group">
+                  <label>Kaldıraç</label>
+                  <select id="leverage">
+                    <option value="3">3x</option>
+                    <option value="5" selected>5x</option>
+                    <option value="10">10x</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Stop Loss (%)</label>
+                  <input type="number" id="stopLoss" value="2" min="0.5" max="5" step="0.5" />
+                </div>
+                <div class="form-group">
+                  <label>Take Profit (%)</label>
+                  <input type="number" id="takeProfit" value="4" min="1" max="20" step="0.5" />
+                </div>
+                <div class="form-group">
+                  <label>İşlem Başına Sermaye (%)</label>
+                  <input type="number" id="positionSize" value="30" min="10" max="100" />
+                </div>
+                <div class="form-group">
+                  <label>Maks. Eş Zamanlı Pozisyon</label>
+                  <input type="number" id="maxPositions" value="2" min="1" max="5" />
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header"><h3>Strateji Ayarları</h3></div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label>EMA Kısa Periyot</label>
+                  <input type="number" id="emaShort" value="9" />
+                </div>
+                <div class="form-group">
+                  <label>EMA Uzun Periyot</label>
+                  <input type="number" id="emaLong" value="21" />
+                </div>
+                <div class="form-group">
+                  <label>RSI Periyot</label>
+                  <input type="number" id="rsiPeriod" value="14" />
+                </div>
+                <div class="form-group">
+                  <label>RSI Alım Eşiği</label>
+                  <input type="number" id="rsiBuy" value="45" />
+                </div>
+                <div class="form-group">
+                  <label>RSI Satım Eşiği</label>
+                  <input type="number" id="rsiSell" value="55" />
+                </div>
+                <div class="form-group">
+                  <label>Aktif Coinler</label>
+                  <div class="checkbox-group">
+                    <!-- JS tarafından doldurulur -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card full-width">
+              <div class="card-header"><h3>İşlemler</h3></div>
+              <div class="action-buttons">
+                <button class="btn btn-primary" id="saveSettingsBtn">💾 Ayarları Kaydet</button>
+                <button class="btn btn-warning" id="resetBotBtn">🔄 Botu Sıfırla</button>
+                <button class="btn btn-danger" id="clearAllBtn">🗑 Tüm Veriyi Sil</button>
+              </div>
+              <div class="settings-info">
+                <h4>Strateji Özeti</h4>
+                <p>• <strong>EMA Crossover:</strong> 9 EMA, 21 EMA'yı yukarı kestiğinde LONG, aşağı kestiğinde SHORT</p>
+                <p>• <strong>RSI Onayı:</strong> LONG için RSI &lt; 45, SHORT için RSI &gt; 55</p>
+                <p>• <strong>Risk/Ödül:</strong> 5x kaldıraç ile %2 SL = %10 kayıp, %4 TP = %20 kazanç</p>
+                <p>• <strong>Hedef:</strong> 1 ayda %200 getiri (100 → 300 USDT)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="strategy.js"></script>
+  <script src="paper-trading.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

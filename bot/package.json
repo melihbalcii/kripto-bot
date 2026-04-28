@@ -1,0 +1,6 @@
+{
+  "name": "kripto-bot",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "engines": { "node": ">=18" }
+}

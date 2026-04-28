@@ -1,0 +1,27 @@
+{
+  "balance": 100,
+  "initialBalance": 100,
+  "positions": [],
+  "history": [],
+  "balanceHistory": [
+    { "time": 1745838000000, "value": 100 }
+  ],
+  "dailyStart": 100,
+  "dailyStartTime": 0,
+  "totalTrades": 0,
+  "wins": 0,
+  "config": {
+    "leverage": 5,
+    "stopLoss": 2,
+    "takeProfit": 4,
+    "positionSize": 30,
+    "maxPositions": 3,
+    "emaShort": 9,
+    "emaLong": 21,
+    "rsiPeriod": 14,
+    "rsiBuy": 45,
+    "rsiSell": 55,
+    "activeSymbols": ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT", "DOGEUSDT"]
+  },
+  "lastRun": null
+}
