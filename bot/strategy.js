@@ -36,12 +36,12 @@ function analyze(candles, config) {
 
   let signal = null;
 
-  // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<30, trend fark etmez)
-  if (currentRsi < rsiBuy && (bullTrend || currentRsi < 30)) {
+  // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<35, trend fark etmez)
+  if (currentRsi < rsiBuy && (bullTrend || currentRsi < 35)) {
     signal = 'LONG';
   }
-  // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>70, trend fark etmez)
-  else if (currentRsi > rsiSell && (bearTrend || currentRsi > 70)) {
+  // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>65, trend fark etmez)
+  else if (currentRsi > rsiSell && (bearTrend || currentRsi > 65)) {
     signal = 'SHORT';
   }
 

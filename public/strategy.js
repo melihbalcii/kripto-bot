@@ -49,12 +49,12 @@ const Strategy = {
     const bullTrend = emaShortVal > emaLongVal;
     const bearTrend = emaShortVal < emaLongVal;
 
-    // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<30)
-    if (currentRsi < rsiBuy && (bullTrend || currentRsi < 30)) {
+    // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<35)
+    if (currentRsi < rsiBuy && (bullTrend || currentRsi < 35)) {
       result.signal = 'LONG';
     }
-    // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>70)
-    else if (currentRsi > rsiSell && (bearTrend || currentRsi > 70)) {
+    // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>65)
+    else if (currentRsi > rsiSell && (bearTrend || currentRsi > 65)) {
       result.signal = 'SHORT';
     }
 
