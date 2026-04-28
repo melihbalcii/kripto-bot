@@ -1,5 +1,5 @@
 {
-  "balance": 70,
+  "balance": 34.3,
   "initialBalance": 100,
   "positions": [
     {
@@ -13,6 +13,30 @@
       "stopLossPrice": 1.3426,
       "takeProfitPrice": 1.4248,
       "openTime": 1777390492563
+    },
+    {
+      "id": 1777394920768,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2275.83,
+      "margin": 21,
+      "leverage": 5,
+      "size": 105,
+      "stopLossPrice": 2321.3466,
+      "takeProfitPrice": 2184.7968,
+      "openTime": 1777394920768
+    },
+    {
+      "id": 1777394932254,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.337,
+      "margin": 14.7,
+      "leverage": 5,
+      "size": 73.5,
+      "stopLossPrice": 1.31026,
+      "takeProfitPrice": 1.39048,
+      "openTime": 1777394932254
     }
   ],
   "history": [],
@@ -38,10 +62,17 @@
     "rsiBuy": 45,
     "rsiSell": 55,
     "activeSymbols": [
-      "BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT",
-      "XRPUSDT", "DOGEUSDT", "NEARUSDT", "TRXUSDT",
-      "OPUSDT", "POLUSDT"
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "BNBUSDT",
+      "XRPUSDT",
+      "DOGEUSDT",
+      "NEARUSDT",
+      "TRXUSDT",
+      "OPUSDT",
+      "POLUSDT"
     ]
   },
-  "lastRun": "2026-04-28T16:24:19.255Z"
+  "lastRun": "2026-04-28T16:49:01.337Z"
 }
