@@ -38,12 +38,9 @@
     "rsiBuy": 45,
     "rsiSell": 55,
     "activeSymbols": [
-      "BTCUSDT",
-      "ETHUSDT",
-      "SOLUSDT",
-      "BNBUSDT",
-      "XRPUSDT",
-      "DOGEUSDT"
+      "BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT",
+      "XRPUSDT", "DOGEUSDT", "NEARUSDT", "TRXUSDT",
+      "OPUSDT", "MATICUSDT"
     ]
   },
   "lastRun": "2026-04-28T15:34:56.738Z"

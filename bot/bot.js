@@ -13,6 +13,7 @@ const CC_SYMBOL = {
   BNBUSDT: 'BNB', XRPUSDT: 'XRP', DOGEUSDT: 'DOGE',
   ADAUSDT: 'ADA', AVAXUSDT: 'AVAX', LINKUSDT: 'LINK',
   DOTUSDT: 'DOT', LTCUSDT: 'LTC', ATOMUSDT: 'ATOM',
+  NEARUSDT: 'NEAR', TRXUSDT: 'TRX', OPUSDT: 'OP', MATICUSDT: 'MATIC',
 };
 
 // ── Durum yükle ──────────────────────────────────────────────────
@@ -47,7 +48,7 @@ function defaultState() {
       rsiPeriod: 14,
       rsiBuy: 45,
       rsiSell: 55,
-      activeSymbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT', 'DOGEUSDT'],
+      activeSymbols: ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT', 'DOGEUSDT', 'NEARUSDT', 'TRXUSDT', 'OPUSDT', 'MATICUSDT'],
     },
     lastRun: null,
   };
