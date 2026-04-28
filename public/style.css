@@ -154,6 +154,29 @@ body {
 
 .bot-controls { display: flex; gap: 8px; }
 
+.github-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--success);
+  letter-spacing: 0.3px;
+}
+
+.gh-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
 .connection-status {
   display: flex;
   align-items: center;

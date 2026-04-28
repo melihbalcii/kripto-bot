@@ -27,30 +27,20 @@ const Strategy = {
     return 100 - (100 / (1 + rs));
   },
 
-  // EMA trend yönü + momentum bazlı sinyal
-  // Crossover yerine trend durumu kullanıyoruz → çok daha sık tetiklenir
   analyze(prices, config) {
     const { emaShort, emaLong, rsiPeriod, rsiBuy, rsiSell } = config;
-    const closePrices = prices.map(c => c.close);
-
+    const closePrices  = prices.map(c => c.close);
     if (closePrices.length < emaLong + 5) return null;
 
-    const currentRsi   = this.rsi(closePrices, rsiPeriod);
-    const emaShortVal  = this.ema(closePrices, emaShort);
-    const emaLongVal   = this.ema(closePrices, emaLong);
+    const currentRsi  = this.rsi(closePrices, rsiPeriod);
+    const emaShortVal = this.ema(closePrices, emaShort);
+    const emaLongVal  = this.ema(closePrices, emaLong);
     const currentPrice = closePrices[closePrices.length - 1];
-
-    // EMA eğimi: son 3 mumun ortalamasıyla karşılaştır
-    const prev3 = closePrices.slice(0, -3);
-    const emaShortPrev = this.ema(prev3, emaShort);
-    const emaLongPrev  = this.ema(prev3, emaLong);
 
     const result = {
       rsi: currentRsi ? currentRsi.toFixed(1) : '--',
-      emaShort: emaShortVal,
-      emaLong: emaLongVal,
-      price: currentPrice,
-      signal: null,
+      emaShort: emaShortVal, emaLong: emaLongVal,
+      price: currentPrice, signal: null,
       trend: emaShortVal > emaLongVal ? 'BULL' : 'BEAR',
     };
 
@@ -59,18 +49,12 @@ const Strategy = {
     const bullTrend = emaShortVal > emaLongVal;
     const bearTrend = emaShortVal < emaLongVal;
 
-    // EMA momentum: trend güçleniyor mu?
-    const spreadNow  = emaShortVal - emaLongVal;
-    const spreadPrev = emaShortPrev - emaLongPrev;
-    const momentumUp   = spreadNow > spreadPrev;  // boğa trendi güçleniyor
-    const momentumDown = spreadNow < spreadPrev;  // ayı trendi güçleniyor
-
-    // LONG: boğa trend + RSI aşırı satım bölgesinden çıkıyor + momentum yukarı
-    if (bullTrend && momentumUp && currentRsi < rsiBuy) {
+    // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<30)
+    if (currentRsi < rsiBuy && (bullTrend || currentRsi < 30)) {
       result.signal = 'LONG';
     }
-    // SHORT: ayı trend + RSI aşırı alım bölgesinden dönüyor + momentum aşağı
-    else if (bearTrend && momentumDown && currentRsi > rsiSell) {
+    // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>70)
+    else if (currentRsi > rsiSell && (bearTrend || currentRsi > 70)) {
       result.signal = 'SHORT';
     }
 

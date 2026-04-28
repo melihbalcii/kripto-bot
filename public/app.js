@@ -39,6 +39,7 @@ const App = {
     this.loadConfig();
     this.buildMarketGrid();
     this.buildCoinCheckboxes();
+    this.buildBotControls();
     this.initChart();
     this.bindEvents();
     this.connectPriceFeed();
@@ -47,8 +48,25 @@ const App = {
     this.updateUI();
     setInterval(() => this.tick(), 30000);
     setInterval(() => this.updateUI(), 3000);
-    // GitHub'dan durumu her 60 saniyede bir çek
     if (GITHUB_STATE_URL) setInterval(() => this.syncRemoteState(), 60000);
+  },
+
+  buildBotControls() {
+    const el = document.getElementById('botControls');
+    if (!el) return;
+    if (GITHUB_STATE_URL) {
+      // GitHub Actions modu — buton yok, her zaman çalışıyor
+      el.innerHTML = `
+        <div class="github-status">
+          <span class="gh-dot"></span>
+          <span>GitHub Actions: 7/24 ÇALIŞIYOR</span>
+        </div>`;
+    } else {
+      // Tarayıcı modu
+      el.innerHTML = `
+        <button class="btn btn-danger" id="stopBtn" style="display:none">⏹ Durdur</button>
+        <button class="btn btn-success" id="startBtn">▶ Botu Başlat</button>`;
+    }
   },
 
   async syncRemoteState() {
@@ -568,20 +586,25 @@ const App = {
       });
     });
 
-    // Bot start/stop
-    document.getElementById('startBtn').addEventListener('click', () => {
-      this.botRunning = true;
-      document.getElementById('startBtn').style.display = 'none';
-      document.getElementById('stopBtn').style.display = '';
-      this.toast('Bot başlatıldı! Sinyal bekleniyor...', 'success');
-    });
-
-    document.getElementById('stopBtn').addEventListener('click', () => {
-      this.botRunning = false;
-      document.getElementById('stopBtn').style.display = 'none';
-      document.getElementById('startBtn').style.display = '';
-      this.toast('Bot durduruldu.', 'warning');
-    });
+    // Bot start/stop (sadece tarayıcı modunda)
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn  = document.getElementById('stopBtn');
+    if (startBtn) {
+      startBtn.addEventListener('click', () => {
+        this.botRunning = true;
+        startBtn.style.display = 'none';
+        stopBtn.style.display  = '';
+        this.toast('Bot başlatıldı! Sinyal bekleniyor...', 'success');
+      });
+    }
+    if (stopBtn) {
+      stopBtn.addEventListener('click', () => {
+        this.botRunning = false;
+        stopBtn.style.display  = 'none';
+        startBtn.style.display = '';
+        this.toast('Bot durduruldu.', 'warning');
+      });
+    }
 
     // Settings
     document.getElementById('saveSettingsBtn').addEventListener('click', () => this.saveConfig());

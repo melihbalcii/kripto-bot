@@ -15,7 +15,7 @@ function rsi(prices, period = 14) {
   const changes = [];
   for (let i = 1; i < prices.length; i++) changes.push(prices[i] - prices[i - 1]);
   const recent = changes.slice(-period);
-  const gains = recent.filter(c => c > 0).reduce((a, b) => a + b, 0) / period;
+  const gains  = recent.filter(c => c > 0).reduce((a, b) => a + b, 0) / period;
   const losses = Math.abs(recent.filter(c => c < 0).reduce((a, b) => a + b, 0)) / period;
   if (losses === 0) return 100;
   return 100 - 100 / (1 + gains / losses);
@@ -29,20 +29,23 @@ function analyze(candles, config) {
   const currentRsi  = rsi(closes, rsiPeriod);
   const emaShortVal = ema(closes, emaShort);
   const emaLongVal  = ema(closes, emaLong);
-  const prev3closes = closes.slice(0, -3);
-  const emaShortPrev = ema(prev3closes, emaShort);
-  const emaLongPrev  = ema(prev3closes, emaLong);
-
   if (!currentRsi || !emaShortVal || !emaLongVal) return null;
 
-  const spreadNow  = emaShortVal - emaLongVal;
-  const spreadPrev = (emaShortPrev && emaLongPrev) ? emaShortPrev - emaLongPrev : 0;
+  const bullTrend = emaShortVal > emaLongVal;
+  const bearTrend = emaShortVal < emaLongVal;
 
   let signal = null;
-  if (emaShortVal > emaLongVal && spreadNow > spreadPrev && currentRsi < rsiBuy) signal = 'LONG';
-  else if (emaShortVal < emaLongVal && spreadNow < spreadPrev && currentRsi > rsiSell) signal = 'SHORT';
 
-  return { signal, rsi: currentRsi, emaShort: emaShortVal, emaLong: emaLongVal };
+  // LONG: EMA uptrend + oversold  VEYA  extreme oversold (RSI<30, trend fark etmez)
+  if (currentRsi < rsiBuy && (bullTrend || currentRsi < 30)) {
+    signal = 'LONG';
+  }
+  // SHORT: EMA downtrend + overbought  VEYA  extreme overbought (RSI>70, trend fark etmez)
+  else if (currentRsi > rsiSell && (bearTrend || currentRsi > 70)) {
+    signal = 'SHORT';
+  }
+
+  return { signal, rsi: currentRsi, emaShort: emaShortVal, emaLong: emaLongVal, trend: bullTrend ? 'BULL' : 'BEAR' };
 }
 
 module.exports = { analyze };
