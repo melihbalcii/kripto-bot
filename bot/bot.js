@@ -5,8 +5,15 @@ const path = require('path');
 const { analyze } = require('./strategy');
 
 const STATE_FILE = path.join(__dirname, '..', 'state.json');
-const KLINE_INTERVAL = '15m';
-const KLINE_LIMIT    = 100;
+const KLINE_LIMIT = 100;
+
+// CryptoCompare sembol eşleştirme
+const CC_SYMBOL = {
+  BTCUSDT: 'BTC', ETHUSDT: 'ETH', SOLUSDT: 'SOL',
+  BNBUSDT: 'BNB', XRPUSDT: 'XRP', DOGEUSDT: 'DOGE',
+  ADAUSDT: 'ADA', AVAXUSDT: 'AVAX', LINKUSDT: 'LINK',
+  DOTUSDT: 'DOT', LTCUSDT: 'LTC', ATOMUSDT: 'ATOM',
+};
 
 // ── Durum yükle ──────────────────────────────────────────────────
 
@@ -57,32 +64,34 @@ function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-// ── Bybit API (GitHub Actions'dan erişilebilir) ───────────────────
+// ── CryptoCompare API (GitHub Actions'dan erişilebilir, ücretsiz) ─
 
 async function fetchKlines(symbol) {
-  const url = `https://api.bybit.com/v5/market/kline?category=linear&symbol=${symbol}&interval=15&limit=${KLINE_LIMIT}`;
-  const res  = await fetch(url);
-  if (!res.ok) throw new Error(`Bybit kline ${symbol}: ${res.status}`);
+  const fsym = CC_SYMBOL[symbol];
+  if (!fsym) throw new Error(`Bilinmeyen sembol: ${symbol}`);
+  const url = `https://min-api.cryptocompare.com/data/v2/histominute?fsym=${fsym}&tsym=USDT&limit=${KLINE_LIMIT}&aggregate=15`;
+  const res  = await fetch(url, { headers: { 'User-Agent': 'KriptoBot/1.0' } });
+  if (!res.ok) throw new Error(`CryptoCompare ${symbol}: ${res.status}`);
   const json = await res.json();
-  if (json.retCode !== 0) throw new Error(`Bybit ${symbol}: ${json.retMsg}`);
-  // Bybit en yeni veriyi önce döndürür, ters çevir
-  return json.result.list.reverse().map(k => ({
-    time:   parseInt(k[0]),
-    open:   parseFloat(k[1]),
-    high:   parseFloat(k[2]),
-    low:    parseFloat(k[3]),
-    close:  parseFloat(k[4]),
-    volume: parseFloat(k[5]),
+  if (json.Response !== 'Success') throw new Error(`CryptoCompare ${symbol}: ${json.Message}`);
+  return json.Data.Data.map(k => ({
+    time:   k.time * 1000,
+    open:   k.open,
+    high:   k.high,
+    low:    k.low,
+    close:  k.close,
+    volume: k.volumefrom,
   }));
 }
 
 async function fetchPrice(symbol) {
-  const url = `https://api.bybit.com/v5/market/tickers?category=linear&symbol=${symbol}`;
-  const res  = await fetch(url);
+  const fsym = CC_SYMBOL[symbol];
+  if (!fsym) return null;
+  const url = `https://min-api.cryptocompare.com/data/price?fsym=${fsym}&tsyms=USDT`;
+  const res  = await fetch(url, { headers: { 'User-Agent': 'KriptoBot/1.0' } });
   if (!res.ok) return null;
   const json = await res.json();
-  if (json.retCode !== 0 || !json.result.list.length) return null;
-  return parseFloat(json.result.list[0].lastPrice);
+  return json.USDT || null;
 }
 
 // ── Pozisyon işlemleri ────────────────────────────────────────────
