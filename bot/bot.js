@@ -238,14 +238,22 @@ async function run() {
     await new Promise(r => setTimeout(r, 2000));
   }
 
-  // Özet
+  // Toplam özsermaye = nakit + açık pozisyon marjini + realize edilmemiş PnL
+  const margins   = state.positions.reduce((s, p) => s + p.margin, 0);
   const unrealized = state.positions.reduce((s, p) => {
     const price = prices[p.symbol] || p.entryPrice;
     const move  = (price - p.entryPrice) / p.entryPrice;
     return s + (p.direction === 'LONG' ? move : -move) * p.size;
   }, 0);
+  const totalEquity = state.balance + margins + unrealized;
 
-  console.log(`\n📈 Bakiye: $${(state.balance + unrealized).toFixed(2)} | Pozisyon: ${state.positions.length} | İşlem: ${state.totalTrades}`);
+  // Her çalışmada özsermaye snapshot'ı ekle (chart için)
+  state.balanceHistory.push({ time: Date.now(), value: totalEquity });
+  if (state.balanceHistory.length > 1000) {
+    state.balanceHistory = state.balanceHistory.slice(-1000);
+  }
+
+  console.log(`\n📈 Özsermaye: $${totalEquity.toFixed(2)} (nakit: $${state.balance.toFixed(2)}, marjin: $${margins.toFixed(2)}, PnL: $${unrealized.toFixed(2)}) | Pozisyon: ${state.positions.length} | İşlem: ${state.totalTrades}`);
 
   saveState(state);
   console.log('💾 Durum kaydedildi.\n');

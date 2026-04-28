@@ -162,6 +162,17 @@ const PaperTrading = {
     }
   },
 
+  // Sadece unrealized PnL hesapla (pozisyon kapatmadan, canlı fiyat güncellemesi)
+  refreshUnrealizedPnL(prices) {
+    for (const pos of this.state.positions) {
+      const price = prices[pos.symbol];
+      if (!price) continue;
+      const move = (price - pos.entryPrice) / pos.entryPrice;
+      pos.unrealizedPnl = pos.direction === 'LONG' ? move * pos.size : -move * pos.size;
+      pos.currentPrice = price;
+    }
+  },
+
   manualClose(positionId, currentPrice) {
     const idx = this.state.positions.findIndex(p => p.id === positionId);
     if (idx === -1) return;
@@ -171,28 +182,31 @@ const PaperTrading = {
     this.save();
   },
 
-  // İstatistikler
+  // İstatistikler — açık pozisyonların marjini ve unrealized PnL dahil
   stats() {
     const { balance, initialBalance, dailyStart, totalTrades, wins, positions } = this.state;
-    const totalPnl = balance - initialBalance;
-    const totalPnlPct = (totalPnl / initialBalance) * 100;
-    const dailyPnl = balance - dailyStart;
-    const dailyPnlPct = dailyStart > 0 ? (dailyPnl / dailyStart) * 100 : 0;
-    const winRate = totalTrades > 0 ? (wins / totalTrades) * 100 : 0;
+    const margins         = positions.reduce((s, p) => s + p.margin, 0);
     const unrealizedTotal = positions.reduce((s, p) => s + (p.unrealizedPnl || 0), 0);
-    const activeValue = positions.reduce((s, p) => s + p.margin, 0);
+    // Toplam özsermaye = nakit + açık pozisyonların marjini + realize edilmemiş PnL
+    const totalEquity     = balance + margins + unrealizedTotal;
+    const totalPnl        = totalEquity - initialBalance;
+    const totalPnlPct     = (totalPnl / initialBalance) * 100;
+    const dailyPnl        = totalEquity - dailyStart;
+    const dailyPnlPct     = dailyStart > 0 ? (dailyPnl / dailyStart) * 100 : 0;
+    const winRate         = totalTrades > 0 ? (wins / totalTrades) * 100 : 0;
 
     return {
-      balance: balance + unrealizedTotal,
-      totalPnl: totalPnl + unrealizedTotal,
-      totalPnlPct: ((totalPnl + unrealizedTotal) / initialBalance) * 100,
+      balance: totalEquity,
+      totalPnl,
+      totalPnlPct,
       dailyPnl,
       dailyPnlPct,
       totalTrades,
       winRate,
       activePositions: positions.length,
-      activeValue,
-      targetProgress: Math.min(((balance / (initialBalance * 3)) * 100), 100),
+      activeValue: margins,
+      unrealizedTotal,
+      targetProgress: Math.min((totalEquity / (initialBalance * 3)) * 100, 100),
     };
   },
 };

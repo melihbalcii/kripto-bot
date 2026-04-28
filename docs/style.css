@@ -345,6 +345,19 @@ body {
 .signal-item.short { border-left-color: var(--danger); }
 .signal-item.closed { border-left-color: var(--text-muted); }
 
+.live-mini {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+  margin-left: 4px;
+  letter-spacing: 0.3px;
+  animation: pulse 2s infinite;
+}
+
 .signal-header {
   display: flex;
   justify-content: space-between;

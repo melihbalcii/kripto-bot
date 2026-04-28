@@ -283,23 +283,23 @@ const App = {
   // ── BOT TICK ──────────────────────────────────────────────────
 
   tick() {
-    // Kapalı pozisyonları kontrol et
+    if (GITHUB_STATE_URL) {
+      // GitHub modu: sadece canlı PnL'i tarayıcıda hesapla
+      // (SL/TP kapatma + yeni pozisyon açma sunucu tarafında)
+      PaperTrading.refreshUnrealizedPnL(this.prices);
+      return;
+    }
+
+    // Tarayıcı modu: kapanan pozisyonları işle
     const closed = PaperTrading.updatePositions(this.prices);
     closed.forEach(pos => {
       const pnlStr = pos.finalPnl >= 0 ? `+$${pos.finalPnl.toFixed(2)}` : `-$${Math.abs(pos.finalPnl).toFixed(2)}`;
-      this.toast(
-        `${pos.symbol} ${pos.closeReason} → ${pnlStr}`,
-        pos.finalPnl >= 0 ? 'success' : 'danger'
-      );
+      this.toast(`${pos.symbol} ${pos.closeReason} → ${pnlStr}`, pos.finalPnl >= 0 ? 'success' : 'danger');
       this.addSignal(pos.symbol, 'closed', pos.closePrice, `Kapatıldı (${pos.closeReason})`);
     });
 
     if (!this.botRunning) return;
-
-    // Sinyal kontrolü
-    this.config.activeSymbols.forEach(symbol => {
-      this.fetchLatestCandle(symbol);
-    });
+    this.config.activeSymbols.forEach(symbol => this.fetchLatestCandle(symbol));
   },
 
   async fetchLatestCandle(symbol) {
@@ -348,6 +348,8 @@ const App = {
   // ── UI ──────────────────────────────────────────────────────
 
   updateUI() {
+    // Canlı PnL hesapla (her UI tick'inde)
+    PaperTrading.refreshUnrealizedPnL(this.prices);
     const stats = PaperTrading.stats();
 
     // Stats
@@ -367,6 +369,7 @@ const App = {
 
     this.updatePositionsPage();
     this.updateHistoryPage();
+    this.rebuildSignalsFromState();
     this.updateChart(stats.balance);
   },
 
@@ -526,14 +529,24 @@ const App = {
     const history = PaperTrading.state.balanceHistory;
     if (!history || history.length === 0) return;
 
-    const balData = history.map(h => ({ x: h.time, y: h.value }));
-    const now = Date.now();
+    const now     = Date.now();
     const initial = PaperTrading.state.initialBalance;
 
+    // Geçmiş + canlı son nokta
+    const balData = history.map(h => ({ x: h.time, y: h.value }));
+    balData.push({ x: now, y: currentBalance });
+
+    // Hedef çizgisi: 1 ay içinde ilk değerden $300'e
+    const startTime  = history[0].time;
+    const targetTime = startTime + 30 * 24 * 60 * 60 * 1000; // 30 gün
     const targetLine = [
-      { x: history[0].time, y: initial },
-      { x: now, y: 300 },
+      { x: startTime,  y: initial },
+      { x: targetTime, y: 300 },
     ];
+
+    // X ekseni penceresi: ilk değer ile şimdi arası
+    this.balanceChart.options.scales.x.min = startTime;
+    this.balanceChart.options.scales.x.max = Math.max(now + 60 * 60 * 1000, startTime + 24 * 60 * 60 * 1000);
 
     this.balanceChart.data.datasets[0].data = balData;
     this.balanceChart.data.datasets[1].data = targetLine;
@@ -541,6 +554,68 @@ const App = {
   },
 
   // ── SIGNALS ─────────────────────────────────────────────────
+
+  // Açık pozisyonları + son kapanan işlemleri sinyal listesine yaz
+  rebuildSignalsFromState() {
+    const list = document.getElementById('signalsList');
+    if (!list) return;
+
+    const items = [];
+
+    // Açık pozisyonlar (en yeni önce)
+    const openPositions = [...PaperTrading.state.positions]
+      .sort((a, b) => b.openTime - a.openTime);
+    for (const p of openPositions) {
+      items.push({
+        symbol: p.symbol,
+        type: p.direction.toLowerCase(),
+        price: p.entryPrice,
+        time: p.openTime,
+        note: `${p.direction} açık · ${p.leverage}x`,
+        live: true,
+      });
+    }
+
+    // Son kapanan 5 işlem
+    const recent = (PaperTrading.state.history || []).slice(0, 5);
+    for (const h of recent) {
+      const sign = h.pnl >= 0 ? '+' : '';
+      items.push({
+        symbol: h.symbol,
+        type: 'closed',
+        price: h.closePrice,
+        time: h.closeTime,
+        note: `Kapandı (${h.reason}) · ${sign}$${h.pnl.toFixed(2)}`,
+      });
+    }
+
+    if (items.length === 0) {
+      list.innerHTML = '<div class="signal-empty">Henüz sinyal yok</div>';
+      return;
+    }
+
+    list.innerHTML = items.slice(0, 10).map(s => {
+      const dirText  = s.type === 'long'  ? '▲ LONG'
+                     : s.type === 'short' ? '▼ SHORT'
+                     : '● KAPANDI';
+      const dirClass = s.type === 'long'  ? 'signal-dir-long'
+                     : s.type === 'short' ? 'signal-dir-short'
+                     : '';
+      const time     = new Date(s.time).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+      const priceStr = s.price > 100 ? s.price.toFixed(2) : s.price.toFixed(4);
+      const liveBadge = s.live ? ' <span class="live-mini">CANLI</span>' : '';
+      return `
+        <div class="signal-item ${s.type}">
+          <div class="signal-header">
+            <span class="signal-coin">${s.symbol.replace('USDT', '')}</span>
+            <span class="${dirClass}">${dirText}${liveBadge}</span>
+            <span class="signal-time">${time}</span>
+          </div>
+          <div class="signal-price">$${priceStr} · ${s.note}</div>
+        </div>
+      `;
+    }).join('');
+  },
 
   addSignal(symbol, direction, price, note) {
     const list = document.getElementById('signalsList');
