@@ -10,7 +10,7 @@ const KLINE_LIMIT = 100;
 
 // GitHub reposundaki state.json URL'si — repo oluşturduktan sonra güncelle
 // Örnek: 'https://raw.githubusercontent.com/KULLANICI/kripto-bot/main/state.json'
-const GITHUB_STATE_URL = '';
+const GITHUB_STATE_URL = 'https://raw.githubusercontent.com/melihbalcii/kripto-bot/main/state.json';
 
 const App = {
   config: {
