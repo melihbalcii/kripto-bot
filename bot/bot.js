@@ -57,29 +57,32 @@ function saveState(state) {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
-// ── Binance API ───────────────────────────────────────────────────
+// ── Bybit API (GitHub Actions'dan erişilebilir) ───────────────────
 
 async function fetchKlines(symbol) {
-  const url = `https://api.binance.com/api/v3/klines?symbol=${symbol}&interval=${KLINE_INTERVAL}&limit=${KLINE_LIMIT}`;
+  const url = `https://api.bybit.com/v5/market/kline?category=linear&symbol=${symbol}&interval=15&limit=${KLINE_LIMIT}`;
   const res  = await fetch(url);
-  if (!res.ok) throw new Error(`Binance ${symbol}: ${res.status}`);
-  const data = await res.json();
-  return data.map(k => ({
+  if (!res.ok) throw new Error(`Bybit kline ${symbol}: ${res.status}`);
+  const json = await res.json();
+  if (json.retCode !== 0) throw new Error(`Bybit ${symbol}: ${json.retMsg}`);
+  // Bybit en yeni veriyi önce döndürür, ters çevir
+  return json.result.list.reverse().map(k => ({
+    time:   parseInt(k[0]),
     open:   parseFloat(k[1]),
     high:   parseFloat(k[2]),
     low:    parseFloat(k[3]),
     close:  parseFloat(k[4]),
     volume: parseFloat(k[5]),
-    time:   k[0],
   }));
 }
 
 async function fetchPrice(symbol) {
-  const url = `https://api.binance.com/api/v3/ticker/price?symbol=${symbol}`;
+  const url = `https://api.bybit.com/v5/market/tickers?category=linear&symbol=${symbol}`;
   const res  = await fetch(url);
   if (!res.ok) return null;
-  const data = await res.json();
-  return parseFloat(data.price);
+  const json = await res.json();
+  if (json.retCode !== 0 || !json.result.list.length) return null;
+  return parseFloat(json.result.list[0].lastPrice);
 }
 
 // ── Pozisyon işlemleri ────────────────────────────────────────────
