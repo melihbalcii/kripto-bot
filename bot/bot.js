@@ -197,14 +197,21 @@ async function run() {
 
   const cfg = state.config;
 
-  // Tüm aktif coinler için fiyat çek
+  // Tüm aktif coinler için fiyat çek (tek seferde)
   const prices = {};
-  for (const symbol of cfg.activeSymbols) {
-    try {
-      prices[symbol] = await fetchPrice(symbol);
-    } catch (e) {
-      console.error(`Fiyat alınamadı: ${symbol}`, e.message);
+  try {
+    const fsyms = cfg.activeSymbols.map(s => CC_SYMBOL[s]).filter(Boolean).join(',');
+    const url   = `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${fsyms}&tsyms=USDT`;
+    const res   = await fetch(url, { headers: { 'User-Agent': 'KriptoBot/1.0' } });
+    if (res.ok) {
+      const data = await res.json();
+      for (const sym of cfg.activeSymbols) {
+        const fsym = CC_SYMBOL[sym];
+        if (fsym && data[fsym]?.USDT) prices[sym] = data[fsym].USDT;
+      }
     }
+  } catch (e) {
+    console.error('Fiyat alınamadı:', e.message);
   }
 
   // SL/TP kontrolü (her zaman çalışır)
@@ -218,15 +225,16 @@ async function run() {
 
       if (!analysis || !analysis.signal) {
         console.log(`📊 ${symbol}: RSI=${analysis?.rsi?.toFixed(1) ?? '--'} | Sinyal yok`);
-        continue;
+      } else {
+        console.log(`📊 ${symbol}: RSI=${analysis.rsi.toFixed(1)} | Sinyal: ${analysis.signal}`);
+        const price = prices[symbol] || candles[candles.length - 1].close;
+        openPosition(state, symbol, analysis.signal, price);
       }
-
-      console.log(`📊 ${symbol}: RSI=${analysis.rsi.toFixed(1)} | Sinyal: ${analysis.signal}`);
-      const price = prices[symbol] || candles[candles.length - 1].close;
-      openPosition(state, symbol, analysis.signal, price);
     } catch (e) {
       console.error(`${symbol} strateji hatası:`, e.message);
     }
+    // Rate limit için bekleme
+    await new Promise(r => setTimeout(r, 2000));
   }
 
   // Özet
