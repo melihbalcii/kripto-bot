@@ -1,5 +1,5 @@
 {
-  "balance": 34.3,
+  "balance": 37.09455860059846,
   "initialBalance": 100,
   "positions": [
     {
@@ -15,18 +15,6 @@
       "openTime": 1777390492563
     },
     {
-      "id": 1777394920768,
-      "symbol": "ETHUSDT",
-      "direction": "SHORT",
-      "entryPrice": 2275.83,
-      "margin": 21,
-      "leverage": 5,
-      "size": 105,
-      "stopLossPrice": 2321.3466,
-      "takeProfitPrice": 2184.7968,
-      "openTime": 1777394920768
-    },
-    {
       "id": 1777394932254,
       "symbol": "NEARUSDT",
       "direction": "LONG",
@@ -37,9 +25,35 @@
       "stopLossPrice": 1.31026,
       "takeProfitPrice": 1.39048,
       "openTime": 1777394932254
+    },
+    {
+      "id": 1777444608198,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2325.85,
+      "margin": 15.897667971685053,
+      "leverage": 5,
+      "size": 79.48833985842526,
+      "stopLossPrice": 2372.3669999999997,
+      "takeProfitPrice": 2232.816,
+      "openTime": 1777444608198
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "id": 1777394920768,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2275.83,
+      "closePrice": 2325.85,
+      "leverage": 5,
+      "pnl": -2.307773427716481,
+      "pnlPct": -10.989397274840385,
+      "reason": "SL",
+      "openTime": 1777394920768,
+      "closeTime": 1777444605809
+    }
+  ],
   "balanceHistory": [
     {
       "time": 1745838000000,
@@ -64,11 +78,19 @@
     {
       "time": 1777435340287,
       "value": 102.07726939251476
+    },
+    {
+      "time": 1777444605809,
+      "value": 52.99222657228351
+    },
+    {
+      "time": 1777444628483,
+      "value": 101.74974176317279
     }
   ],
   "dailyStart": 34.3,
   "dailyStartTime": 1777420800000,
-  "totalTrades": 0,
+  "totalTrades": 1,
   "wins": 0,
   "config": {
     "leverage": 5,
@@ -94,5 +116,5 @@
       "POLUSDT"
     ]
   },
-  "lastRun": "2026-04-29T04:02:20.287Z"
+  "lastRun": "2026-04-29T06:37:08.484Z"
 }
