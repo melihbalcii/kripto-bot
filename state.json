@@ -1,15 +1,15 @@
 {
-  "balance": 1000,
-  "initialBalance": 1000,
+  "balance": 1,
+  "initialBalance": 1,
   "positions": [],
   "history": [],
   "balanceHistory": [
     {
-      "time": 1777556512464,
-      "value": 1000
+      "time": 1777556559572,
+      "value": 1
     }
   ],
-  "dailyStart": 1000,
+  "dailyStart": 1,
   "dailyStartTime": 1777507200000,
   "totalTrades": 0,
   "wins": 0,
