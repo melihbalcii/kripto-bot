@@ -1,5 +1,5 @@
 {
-  "balance": 100.1129150390625,
+  "balance": 56.313514709472656,
   "initialBalance": 1000,
   "positions": [
     {
@@ -97,6 +97,30 @@
       "stopLossPrice": 1.87347,
       "takeProfitPrice": 1.95906,
       "openTime": 1777561526108
+    },
+    {
+      "id": 1777572470857,
+      "symbol": "POLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.09603,
+      "margin": 25.028228759765625,
+      "leverage": 10,
+      "size": 250.28228759765625,
+      "stopLossPrice": 0.09747045,
+      "takeProfitPrice": 0.0931491,
+      "openTime": 1777572470857
+    },
+    {
+      "id": 1777572479816,
+      "symbol": "DOTUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.212,
+      "margin": 18.77117156982422,
+      "leverage": 10,
+      "size": 187.7117156982422,
+      "stopLossPrice": 1.2301799999999998,
+      "takeProfitPrice": 1.17564,
+      "openTime": 1777572479816
     }
   ],
   "history": [],
@@ -116,6 +140,10 @@
     {
       "time": 1777567605384,
       "value": 1005.2524453057562
+    },
+    {
+      "time": 1777572486461,
+      "value": 1009.1752425906286
     }
   ],
   "dailyStart": 1000,
@@ -152,5 +180,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-04-30T16:46:45.384Z"
+  "lastRun": "2026-04-30T18:08:06.461Z"
 }
