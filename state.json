@@ -178,7 +178,7 @@
     "stopLoss": 1.5,
     "takeProfit": 3,
     "positionSize": 25,
-    "maxPositions": 4,
+    "maxPositions": 10,
     "emaShort": 9,
     "emaLong": 21,
     "rsiPeriod": 14,
@@ -194,7 +194,13 @@
       "NEARUSDT",
       "TRXUSDT",
       "OPUSDT",
-      "POLUSDT"
+      "POLUSDT",
+      "ADAUSDT",
+      "AVAXUSDT",
+      "LINKUSDT",
+      "DOTUSDT",
+      "LTCUSDT",
+      "ATOMUSDT"
     ]
   },
   "lastRun": "2026-04-30T12:53:16.991Z"
