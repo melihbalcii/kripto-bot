@@ -143,10 +143,14 @@
     {
       "time": 1777504212730,
       "value": 98.84121894225112
+    },
+    {
+      "time": 1777507627077,
+      "value": 98.949799914545
     }
   ],
-  "dailyStart": 34.3,
-  "dailyStartTime": 1777420800000,
+  "dailyStart": 35.17870410942416,
+  "dailyStartTime": 1777507200000,
   "totalTrades": 2,
   "wins": 0,
   "config": {
@@ -173,5 +177,5 @@
       "POLUSDT"
     ]
   },
-  "lastRun": "2026-04-29T23:10:12.730Z"
+  "lastRun": "2026-04-30T00:07:07.077Z"
 }
