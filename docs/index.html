@@ -233,16 +233,36 @@
             </div>
 
             <div class="card full-width">
+              <div class="card-header">
+                <h3>GitHub Bağlantısı</h3>
+                <span class="token-status" id="tokenStatus">Kayıtlı değil</span>
+              </div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label>GitHub Personal Access Token</label>
+                  <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" />
+                  <small class="form-hint">
+                    Token olmadan ayarlar sadece tarayıcında kalır, bot okumaz.
+                    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">Buradan oluştur</a> →
+                    Repository access: <strong>kripto-bot</strong> seç →
+                    Permissions: <strong>Contents: Read and write</strong> →
+                    Token'ı kopyalayıp buraya yapıştır.
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="card full-width">
               <div class="card-header"><h3>İşlemler</h3></div>
               <div class="action-buttons">
-                <button class="btn btn-primary" id="saveSettingsBtn">💾 Ayarları Kaydet</button>
+                <button class="btn btn-primary" id="saveSettingsBtn">💾 Ayarları Kaydet ve GitHub'a Gönder</button>
                 <button class="btn btn-warning" id="resetBotBtn">🔄 Botu Sıfırla</button>
                 <button class="btn btn-danger" id="clearAllBtn">🗑 Tüm Veriyi Sil</button>
               </div>
               <div class="settings-info">
                 <h4>Strateji Özeti</h4>
-                <p>• <strong>EMA Crossover:</strong> 9 EMA, 21 EMA'yı yukarı kestiğinde LONG, aşağı kestiğinde SHORT</p>
-                <p>• <strong>RSI Onayı:</strong> LONG için RSI &lt; 45, SHORT için RSI &gt; 55</p>
+                <p>• <strong>EMA + RSI:</strong> EMA9>EMA21 ve RSI&lt;45 → LONG; EMA9&lt;EMA21 ve RSI>55 → SHORT</p>
+                <p>• <strong>Aşırı RSI:</strong> RSI&lt;35 → LONG; RSI>65 → SHORT (trend bağımsız)</p>
                 <p>• <strong>Risk/Ödül:</strong> 5x kaldıraç ile %2 SL = %10 kayıp, %4 TP = %20 kazanç</p>
                 <p>• <strong>Hedef:</strong> 1 ayda %200 getiri (100 → 300 USDT)</p>
               </div>

@@ -345,6 +345,28 @@ body {
 .signal-item.short { border-left-color: var(--danger); }
 .signal-item.closed { border-left-color: var(--text-muted); }
 
+.token-status {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+.token-status.off { background: rgba(100, 116, 139, 0.15); color: var(--text-muted); }
+.token-status.ok  { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+.token-status.err { background: rgba(239, 68, 68, 0.15);  color: var(--danger); }
+.token-status:not(.off):not(.ok):not(.err) { background: rgba(100, 116, 139, 0.15); color: var(--text-muted); }
+
+.form-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+.form-hint a { color: var(--accent); text-decoration: none; }
+.form-hint a:hover { text-decoration: underline; }
+.form-hint strong { color: var(--text-secondary); }
+
 .live-mini {
   display: inline-block;
   font-size: 9px;
