@@ -1,11 +1,52 @@
 {
-  "balance": 1000,
+  "balance": 421.875,
   "initialBalance": 1000,
-  "positions": [],
+  "positions": [
+    {
+      "id": 1777557037546,
+      "symbol": "BTCUSDT",
+      "direction": "SHORT",
+      "entryPrice": 76507.84,
+      "margin": 250,
+      "leverage": 10,
+      "size": 2500,
+      "stopLossPrice": 77655.4576,
+      "takeProfitPrice": 74212.6048,
+      "openTime": 1777557037546
+    },
+    {
+      "id": 1777557053113,
+      "symbol": "TRXUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.3257,
+      "margin": 187.5,
+      "leverage": 10,
+      "size": 1875,
+      "stopLossPrice": 0.3208145,
+      "takeProfitPrice": 0.335471,
+      "openTime": 1777557053113
+    },
+    {
+      "id": 1777557059683,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2462,
+      "margin": 140.625,
+      "leverage": 10,
+      "size": 1406.25,
+      "stopLossPrice": 0.24989299999999998,
+      "takeProfitPrice": 0.238814,
+      "openTime": 1777557059683
+    }
+  ],
   "history": [],
   "balanceHistory": [
     {
       "time": 1777556633812,
+      "value": 1000
+    },
+    {
+      "time": 1777557072973,
       "value": 1000
     }
   ],
@@ -43,5 +84,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": null
+  "lastRun": "2026-04-30T13:51:12.973Z"
 }
