@@ -1,5 +1,5 @@
 {
-  "balance": 421.875,
+  "balance": 100.1129150390625,
   "initialBalance": 1000,
   "positions": [
     {
@@ -37,6 +37,66 @@
       "stopLossPrice": 0.24989299999999998,
       "takeProfitPrice": 0.238814,
       "openTime": 1777557059683
+    },
+    {
+      "id": 1777561498993,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 616.02,
+      "margin": 105.46875,
+      "leverage": 10,
+      "size": 1054.6875,
+      "stopLossPrice": 625.2602999999999,
+      "takeProfitPrice": 597.5394,
+      "openTime": 1777561498993
+    },
+    {
+      "id": 1777561503634,
+      "symbol": "DOGEUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1062,
+      "margin": 79.1015625,
+      "leverage": 10,
+      "size": 791.015625,
+      "stopLossPrice": 0.10779299999999999,
+      "takeProfitPrice": 0.103014,
+      "openTime": 1777561503634
+    },
+    {
+      "id": 1777561505880,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.31,
+      "margin": 59.326171875,
+      "leverage": 10,
+      "size": 593.26171875,
+      "stopLossPrice": 1.29035,
+      "takeProfitPrice": 1.3493000000000002,
+      "openTime": 1777561505880
+    },
+    {
+      "id": 1777561510420,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1201,
+      "margin": 44.49462890625,
+      "leverage": 10,
+      "size": 444.9462890625,
+      "stopLossPrice": 0.1182985,
+      "takeProfitPrice": 0.12370300000000001,
+      "openTime": 1777561510420
+    },
+    {
+      "id": 1777561526108,
+      "symbol": "ATOMUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.902,
+      "margin": 33.3709716796875,
+      "leverage": 10,
+      "size": 333.709716796875,
+      "stopLossPrice": 1.87347,
+      "takeProfitPrice": 1.95906,
+      "openTime": 1777561526108
     }
   ],
   "history": [],
@@ -48,6 +108,10 @@
     {
       "time": 1777557072973,
       "value": 1000
+    },
+    {
+      "time": 1777561528108,
+      "value": 1013.8119752268425
     }
   ],
   "dailyStart": 1000,
@@ -84,5 +148,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-04-30T13:51:12.973Z"
+  "lastRun": "2026-04-30T15:05:28.109Z"
 }
