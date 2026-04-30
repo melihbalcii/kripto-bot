@@ -8,11 +8,11 @@ const SYMBOLS = [
 const KLINE_INTERVAL = '15m';
 const KLINE_LIMIT = 100;
 
-// GitHub repo bilgileri
-const GITHUB_REPO  = 'melihbalcii/kripto-bot';
-const GITHUB_BRANCH = 'main';
-const GITHUB_STATE_URL = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/state.json`;
-const GITHUB_API_URL   = `https://api.github.com/repos/${GITHUB_REPO}/contents/state.json`;
+// State'i okumak için raw GitHub URL (public, auth yok)
+const GITHUB_STATE_URL = 'https://raw.githubusercontent.com/melihbalcii/kripto-bot/main/state.json';
+
+// Yazma işlemleri Netlify Function üzerinden (auth: shared secret)
+const UPDATE_CONFIG_URL = '/.netlify/functions/update-config';
 
 const App = {
   config: {
@@ -156,141 +156,56 @@ const App = {
 
     localStorage.setItem('kriptobot_config', JSON.stringify(this.config));
 
-    // Token varsa GitHub'a da yaz
-    const tokenInput = document.getElementById('githubToken');
-    const newToken   = tokenInput?.value?.trim();
-    if (newToken) {
-      localStorage.setItem('kriptobot_github_token', newToken);
-      tokenInput.value = '';
+    // Şifre alanı dolduysa kaydet
+    const secretInput = document.getElementById('botSecret');
+    const newSecret   = secretInput?.value?.trim();
+    if (newSecret) {
+      localStorage.setItem('kriptobot_secret', newSecret);
+      secretInput.value = '';
     }
-    const token = localStorage.getItem('kriptobot_github_token');
+    const secret = localStorage.getItem('kriptobot_secret');
 
-    if (!token) {
-      this.toast('Ayarlar tarayıcıya kaydedildi. Bot için GitHub token ekle!', 'warning');
+    if (!secret) {
+      this.toast('Ayarlar tarayıcıya kaydedildi. Bot için şifre ekle!', 'warning');
       this.updateTokenStatus();
       return;
     }
 
-    // Yeni başlangıç bakiyesi (sadece reset edilirse uygulanır, ama yine push edelim)
-    const initBal = parseFloat(document.getElementById('initialBalance').value);
-
     try {
-      this.toast('GitHub\'a gönderiliyor…', 'info');
-      await this.pushConfigToGitHub(this.config, token, initBal);
-      this.toast('Ayarlar GitHub\'a yüklendi! Bot 15 dakikada güncel ayarla çalışacak.', 'success');
+      this.toast('Bot ayarları güncelleniyor…', 'info');
+      await this.callUpdateConfig({ config: this.config }, secret);
+      this.toast('Ayarlar yüklendi! Bot 15 dakikada güncel ayarla çalışacak.', 'success');
       this.updateTokenStatus(true);
     } catch (e) {
-      console.error('Config push hatası:', e);
-      this.toast(`GitHub hatası: ${e.message}`, 'danger');
-      this.updateTokenStatus(false);
+      console.error('Config update hatası:', e);
+      this.toast(`Hata: ${e.message}`, 'danger');
+      if (e.message.includes('401')) this.updateTokenStatus(false);
     }
   },
 
-  async pushConfigToGitHub(newConfig, token, newInitialBalance) {
-    // 1. Mevcut state.json'u çek (sha gerekli)
-    const getRes = await fetch(GITHUB_API_URL, {
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept':        'application/vnd.github+json',
-      },
+  async callUpdateConfig(payload, secret) {
+    const res = await fetch(UPDATE_CONFIG_URL, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Secret': secret },
+      body:    JSON.stringify(payload),
     });
-    if (!getRes.ok) {
-      const err = await getRes.json().catch(() => ({}));
-      throw new Error(`GET ${getRes.status}: ${err.message || 'Token geçersiz olabilir'}`);
-    }
-    const file  = await getRes.json();
-    const text  = decodeURIComponent(escape(atob(file.content.replace(/\n/g, ''))));
-    const state = JSON.parse(text);
-
-    // 2. Config'i güncelle
-    state.config = { ...state.config, ...newConfig };
-
-    // Başlangıç bakiyesi değiştirildiyse (sadece bot sıfırlanmadıysa nakit etkilenmez,
-    // sadece initialBalance ve hedef yeniden hesaplanır)
-    if (newInitialBalance && newInitialBalance !== state.initialBalance && !state.positions?.length) {
-      state.initialBalance = newInitialBalance;
-      state.balance        = newInitialBalance;
-      state.dailyStart     = newInitialBalance;
-      state.balanceHistory = [{ time: Date.now(), value: newInitialBalance }];
-    }
-
-    // 3. Base64 encode + push
-    const newContent  = btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))));
-    const putRes = await fetch(GITHUB_API_URL, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept':        'application/vnd.github+json',
-        'Content-Type':  'application/json',
-      },
-      body: JSON.stringify({
-        message: 'config: dashboard\'dan ayarlar güncellendi',
-        content: newContent,
-        sha:     file.sha,
-        branch:  GITHUB_BRANCH,
-      }),
-    });
-    if (!putRes.ok) {
-      const err = await putRes.json().catch(() => ({}));
-      throw new Error(`PUT ${putRes.status}: ${err.message || 'Yazma yetkisi yok'}`);
-    }
-    return true;
-  },
-
-  async pushFreshStateToGitHub(token, initBal) {
-    const getRes = await fetch(GITHUB_API_URL, {
-      headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' },
-    });
-    if (!getRes.ok) throw new Error(`GET ${getRes.status}`);
-    const file = await getRes.json();
-
-    const fresh = {
-      balance: initBal,
-      initialBalance: initBal,
-      positions: [],
-      history: [],
-      balanceHistory: [{ time: Date.now(), value: initBal }],
-      dailyStart: initBal,
-      dailyStartTime: new Date().setHours(0, 0, 0, 0),
-      totalTrades: 0,
-      wins: 0,
-      config: this.config,
-      lastRun: null,
-    };
-
-    const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(fresh, null, 2))));
-    const putRes = await fetch(GITHUB_API_URL, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'Accept':        'application/vnd.github+json',
-        'Content-Type':  'application/json',
-      },
-      body: JSON.stringify({
-        message: `reset: bot $${initBal} ile sıfırlandı`,
-        content: newContent,
-        sha: file.sha,
-        branch: GITHUB_BRANCH,
-      }),
-    });
-    if (!putRes.ok) {
-      const err = await putRes.json().catch(() => ({}));
-      throw new Error(`PUT ${putRes.status}: ${err.message || 'yazma hatası'}`);
-    }
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(`${res.status}: ${data.error || 'bilinmeyen hata'}`);
+    return data;
   },
 
   updateTokenStatus(success) {
     const el = document.getElementById('tokenStatus');
     if (!el) return;
-    const has = !!localStorage.getItem('kriptobot_github_token');
+    const has = !!localStorage.getItem('kriptobot_secret');
     if (!has) {
-      el.textContent = 'Kayıtlı değil';
+      el.textContent = 'Şifre kayıtlı değil';
       el.className   = 'token-status off';
     } else if (success === false) {
-      el.textContent = 'Token geçersiz';
+      el.textContent = 'Şifre yanlış';
       el.className   = 'token-status err';
     } else {
-      el.textContent = '✓ Bağlı';
+      el.textContent = '✓ Şifre kayıtlı';
       el.className   = 'token-status ok';
     }
   },
@@ -828,22 +743,22 @@ const App = {
       const bal = parseFloat(document.getElementById('initialBalance').value) || 100;
       if (!confirm(`Botu ${bal} USDT ile sıfırlamak istediğinizden emin misiniz?\n\nTüm açık pozisyonlar ve geçmiş silinecek.`)) return;
 
-      const token = localStorage.getItem('kriptobot_github_token');
-      if (token) {
-        try {
-          this.toast('GitHub\'da bot sıfırlanıyor…', 'info');
-          await this.pushFreshStateToGitHub(token, bal);
-          this.toast(`Bot $${bal} ile sıfırlandı! GitHub'a yüklendi.`, 'success');
-        } catch (e) {
-          this.toast(`GitHub hatası: ${e.message}`, 'danger');
-          return;
-        }
-      } else {
-        this.toast('Token yok, sadece tarayıcıda sıfırlandı.', 'warning');
+      const secret = localStorage.getItem('kriptobot_secret');
+      if (!secret) {
+        this.toast('Şifre yok, önce şifreyi gir!', 'warning');
+        return;
       }
-      PaperTrading.reset(bal);
-      this.updateUI();
-      this.initChart();
+
+      try {
+        this.toast('Bot sıfırlanıyor…', 'info');
+        await this.callUpdateConfig({ action: 'reset', initialBalance: bal, config: this.config }, secret);
+        this.toast(`Bot $${bal} ile sıfırlandı!`, 'success');
+        PaperTrading.reset(bal);
+        this.updateUI();
+        this.initChart();
+      } catch (e) {
+        this.toast(`Hata: ${e.message}`, 'danger');
+      }
     });
 
     document.getElementById('clearAllBtn').addEventListener('click', () => {

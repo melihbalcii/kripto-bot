@@ -1,9 +1,12 @@
 [build]
-  publish = "public"
+  publish   = "docs"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; connect-src 'self' wss://stream.binance.com:9443 wss://stream.binance.com https://api.binance.com https://*.binance.com; img-src 'self' data:"

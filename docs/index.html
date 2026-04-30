@@ -234,19 +234,16 @@
 
             <div class="card full-width">
               <div class="card-header">
-                <h3>GitHub Bağlantısı</h3>
+                <h3>Bot Şifresi</h3>
                 <span class="token-status" id="tokenStatus">Kayıtlı değil</span>
               </div>
               <div class="settings-form">
                 <div class="form-group">
-                  <label>GitHub Personal Access Token</label>
-                  <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" />
+                  <label>Şifre (sadece sen biliyorsun)</label>
+                  <input type="password" id="botSecret" placeholder="kendi belirlediğin şifre" autocomplete="off" />
                   <small class="form-hint">
-                    Token olmadan ayarlar sadece tarayıcında kalır, bot okumaz.
-                    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">Buradan oluştur</a> →
-                    Repository access: <strong>kripto-bot</strong> seç →
-                    Permissions: <strong>Contents: Read and write</strong> →
-                    Token'ı kopyalayıp buraya yapıştır.
+                    Ayarları değiştirmek ve botu sıfırlamak için. Tarayıcına kaydedilir.
+                    Şifre Netlify env variable'da tanımlı olmalı (<strong>SHARED_SECRET</strong>).
                   </small>
                 </div>
               </div>
