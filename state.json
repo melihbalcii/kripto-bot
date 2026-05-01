@@ -1,5 +1,5 @@
 {
-  "balance": 221.5064121445203,
+  "balance": 166.12980910839025,
   "initialBalance": 1000,
   "positions": [
     {
@@ -109,6 +109,18 @@
       "stopLossPrice": 85.9705,
       "takeProfitPrice": 82.159,
       "openTime": 1777643627016
+    },
+    {
+      "id": 1777654363861,
+      "symbol": "DOGEUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1089,
+      "margin": 55.37660303613008,
+      "leverage": 10,
+      "size": 553.7660303613007,
+      "stopLossPrice": 0.1072665,
+      "takeProfitPrice": 0.112167,
+      "openTime": 1777654363861
     }
   ],
   "history": [
@@ -274,6 +286,10 @@
     {
       "time": 1777650788811,
       "value": 890.4137578842674
+    },
+    {
+      "time": 1777654390807,
+      "value": 898.9839110553964
     }
   ],
   "dailyStart": 56.313514709472656,
@@ -310,5 +326,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-01T15:53:08.811Z"
+  "lastRun": "2026-05-01T16:53:10.807Z"
 }
