@@ -1,5 +1,5 @@
 {
-  "balance": 56.313514709472656,
+  "balance": 88.71289026939266,
   "initialBalance": 1000,
   "positions": [
     {
@@ -49,18 +49,6 @@
       "stopLossPrice": 625.2602999999999,
       "takeProfitPrice": 597.5394,
       "openTime": 1777561498993
-    },
-    {
-      "id": 1777561503634,
-      "symbol": "DOGEUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1062,
-      "margin": 79.1015625,
-      "leverage": 10,
-      "size": 791.015625,
-      "stopLossPrice": 0.10779299999999999,
-      "takeProfitPrice": 0.103014,
-      "openTime": 1777561503634
     },
     {
       "id": 1777561505880,
@@ -121,9 +109,35 @@
       "stopLossPrice": 1.2301799999999998,
       "takeProfitPrice": 1.17564,
       "openTime": 1777572479816
+    },
+    {
+      "id": 1777602991961,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2266.83,
+      "margin": 29.570963423130884,
+      "leverage": 10,
+      "size": 295.7096342313088,
+      "stopLossPrice": 2300.83245,
+      "takeProfitPrice": 2198.8251,
+      "openTime": 1777602991961
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "id": 1777561503634,
+      "symbol": "DOGEUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1062,
+      "closePrice": 0.1085,
+      "leverage": 10,
+      "pnl": -17.131223516949124,
+      "pnlPct": -21.657250470809757,
+      "reason": "SL",
+      "openTime": 1777561503634,
+      "closeTime": 1777602989447
+    }
+  ],
   "balanceHistory": [
     {
       "time": 1777556633812,
@@ -164,11 +178,19 @@
     {
       "time": 1777592895376,
       "value": 1005.0607942420543
+    },
+    {
+      "time": 1777602989447,
+      "value": 118.28385369252354
+    },
+    {
+      "time": 1777603026027,
+      "value": 977.9611896249768
     }
   ],
-  "dailyStart": 1000,
-  "dailyStartTime": 1777507200000,
-  "totalTrades": 0,
+  "dailyStart": 56.313514709472656,
+  "dailyStartTime": 1777593600000,
+  "totalTrades": 1,
   "wins": 0,
   "config": {
     "leverage": 10,
@@ -200,5 +222,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-04-30T23:48:15.376Z"
+  "lastRun": "2026-05-01T02:37:06.028Z"
 }
