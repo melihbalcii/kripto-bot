@@ -1,19 +1,7 @@
 {
-  "balance": 127.12890584220784,
+  "balance": 287.7831623414349,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1777557053113,
-      "symbol": "TRXUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.3257,
-      "margin": 187.5,
-      "leverage": 10,
-      "size": 1875,
-      "stopLossPrice": 0.3208145,
-      "takeProfitPrice": 0.335471,
-      "openTime": 1777557053113
-    },
     {
       "id": 1777561498993,
       "symbol": "BNBUSDT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.1204655,
       "takeProfitPrice": 0.125969,
       "openTime": 1777781433535
+    },
+    {
+      "id": 1777790375710,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3377,
+      "margin": 95.9277207804783,
+      "leverage": 10,
+      "size": 959.277207804783,
+      "stopLossPrice": 0.34276549999999995,
+      "takeProfitPrice": 0.327569,
+      "openTime": 1777790375710
     }
   ],
   "history": [
+    {
+      "id": 1777557053113,
+      "symbol": "TRXUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.3257,
+      "closePrice": 0.3377,
+      "leverage": 10,
+      "pnl": 69.08197727970531,
+      "pnlPct": 36.843721215842834,
+      "reason": "TP",
+      "openTime": 1777557053113,
+      "closeTime": 1777790358852
+    },
     {
       "id": 1777752244606,
       "symbol": "OPUSDT",
@@ -504,12 +517,20 @@
     {
       "time": 1777781451273,
       "value": 923.7524753015687
+    },
+    {
+      "time": 1777790358852,
+      "value": 383.7108831219132
+    },
+    {
+      "time": 1777790397716,
+      "value": 962.0955634873009
     }
   ],
   "dailyStart": 111.09776575952273,
   "dailyStartTime": 1777766400000,
-  "totalTrades": 11,
-  "wins": 2,
+  "totalTrades": 12,
+  "wins": 3,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -540,5 +561,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-03T04:10:51.273Z"
+  "lastRun": "2026-05-03T06:39:57.717Z"
 }
