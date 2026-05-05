@@ -1,5 +1,5 @@
 {
-  "balance": 189.31261870931488,
+  "balance": 198.63167595655227,
   "initialBalance": 1000,
   "positions": [
     {
@@ -49,18 +49,6 @@
       "stopLossPrice": 1.4362249999999999,
       "takeProfitPrice": 1.37255,
       "openTime": 1777870607585
-    },
-    {
-      "id": 1777889410298,
-      "symbol": "NEARUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.261,
-      "margin": 52.5913007449864,
-      "leverage": 10,
-      "size": 525.9130074498639,
-      "stopLossPrice": 1.2420849999999999,
-      "takeProfitPrice": 1.29883,
-      "openTime": 1777889410298
     },
     {
       "id": 1777976353278,
@@ -121,9 +109,34 @@
       "stopLossPrice": 88.01064999999998,
       "takeProfitPrice": 84.10869999999998,
       "openTime": 1778011438336
+    },
+    {
+      "id": 1778015652558,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.316,
+      "margin": 66.21055865218409,
+      "leverage": 10,
+      "size": 662.1055865218409,
+      "stopLossPrice": 1.33574,
+      "takeProfitPrice": 1.27652,
+      "openTime": 1778015652558
     }
   ],
   "history": [
+    {
+      "id": 1777889410298,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.261,
+      "closePrice": 1.316,
+      "leverage": 10,
+      "pnl": 22.938315154435053,
+      "pnlPct": 43.616177636796316,
+      "reason": "TP",
+      "openTime": 1777889410298,
+      "closeTime": 1778015637826
+    },
     {
       "id": 1777643627016,
       "symbol": "SOLUSDT",
@@ -936,12 +949,20 @@
     {
       "time": 1778011469864,
       "value": 936.4526974196782
+    },
+    {
+      "time": 1778015637826,
+      "value": 264.84223460873636
+    },
+    {
+      "time": 1778015677338,
+      "value": 940.0500872104083
     }
   ],
   "dailyStart": 118.33042667621939,
   "dailyStartTime": 1777939200000,
-  "totalTrades": 27,
-  "wins": 9,
+  "totalTrades": 28,
+  "wins": 10,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -972,5 +993,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-05T20:04:29.864Z"
+  "lastRun": "2026-05-05T21:14:37.338Z"
 }
