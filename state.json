@@ -1,5 +1,5 @@
 {
-  "balance": 104.28401930856128,
+  "balance": 122.22732585517181,
   "initialBalance": 1000,
   "positions": [
     {
@@ -63,18 +63,6 @@
       "openTime": 1778058652596
     },
     {
-      "id": 1778058654809,
-      "symbol": "BNBUSDT",
-      "direction": "SHORT",
-      "entryPrice": 644.81,
-      "margin": 101.58110862649721,
-      "leverage": 10,
-      "size": 1015.8110862649721,
-      "stopLossPrice": 654.4821499999999,
-      "takeProfitPrice": 625.4657,
-      "openTime": 1778058654809
-    },
-    {
       "id": 1778058657069,
       "symbol": "XRPUSDT",
       "direction": "SHORT",
@@ -111,19 +99,57 @@
       "openTime": 1778058668116
     },
     {
+      "id": 1778073074588,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 654.61,
+      "margin": 54.32325593563192,
+      "leverage": 10,
+      "size": 543.2325593563191,
+      "stopLossPrice": 664.4291499999999,
+      "takeProfitPrice": 634.9716999999999,
+      "openTime": 1778073074588
+    },
+    {
+      "id": 1778073081208,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.486,
+      "margin": 40.74244195172394,
+      "leverage": 10,
+      "size": 407.4244195172394,
+      "stopLossPrice": 1.50829,
+      "takeProfitPrice": 1.44142,
+      "openTime": 1778073081208
+    }
+  ],
+  "history": [
+    {
       "id": 1778066379137,
       "symbol": "NEARUSDT",
       "direction": "SHORT",
       "entryPrice": 1.453,
-      "margin": 34.761339769520426,
+      "closePrice": 1.486,
       "leverage": 10,
-      "size": 347.61339769520424,
-      "stopLossPrice": 1.4747949999999999,
-      "takeProfitPrice": 1.40941,
-      "openTime": 1778066379137
-    }
-  ],
-  "history": [
+      "pnl": -7.894867256670138,
+      "pnlPct": -22.711631108052245,
+      "reason": "SL",
+      "openTime": 1778066379137,
+      "closeTime": 1778073067792
+    },
+    {
+      "id": 1778058654809,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 644.81,
+      "closePrice": 654.61,
+      "leverage": 10,
+      "pnl": -15.438576705381116,
+      "pnlPct": -15.198275460988617,
+      "reason": "SL",
+      "openTime": 1778058654809,
+      "closeTime": 1778073067792
+    },
     {
       "id": 1778058661504,
       "symbol": "NEARUSDT",
@@ -1121,11 +1147,23 @@
     {
       "time": 1778066402825,
       "value": 790.2788841157927
+    },
+    {
+      "time": 1778073067792,
+      "value": 190.4265512296774
+    },
+    {
+      "time": 1778073067792,
+      "value": 217.29302374252768
+    },
+    {
+      "time": 1778073103641,
+      "value": 817.4911707803691
     }
   ],
   "dailyStart": 198.63167595655227,
   "dailyStartTime": 1778025600000,
-  "totalTrades": 36,
+  "totalTrades": 38,
   "wins": 11,
   "config": {
     "leverage": 10,
@@ -1157,5 +1195,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-06T11:20:02.826Z"
+  "lastRun": "2026-05-06T13:11:43.641Z"
 }
