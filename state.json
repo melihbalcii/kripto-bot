@@ -1,19 +1,7 @@
 {
-  "balance": 210.6509296928314,
+  "balance": 190.46760539290332,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1778000585292,
-      "symbol": "TRXUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.3438,
-      "margin": 51.02316889551557,
-      "leverage": 10,
-      "size": 510.2316889551557,
-      "stopLossPrice": 0.34895699999999996,
-      "takeProfitPrice": 0.333486,
-      "openTime": 1778000585292
-    },
     {
       "id": 1778011433705,
       "symbol": "BTCUSDT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.107168,
       "takeProfitPrice": 0.112064,
       "openTime": 1778165363120
+    },
+    {
+      "id": 1778172356870,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.349,
+      "margin": 63.48920179763444,
+      "leverage": 10,
+      "size": 634.8920179763444,
+      "stopLossPrice": 0.35423499999999997,
+      "takeProfitPrice": 0.33852999999999994,
+      "openTime": 1778172356870
     }
   ],
   "history": [
+    {
+      "id": 1778000585292,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3438,
+      "closePrice": 0.349,
+      "leverage": 10,
+      "pnl": -7.717291397809193,
+      "pnlPct": -15.125072716695703,
+      "reason": "SL",
+      "openTime": 1778000585292,
+      "closeTime": 1778172340381
+    },
     {
       "id": 1778116998206,
       "symbol": "DOGEUSDT",
@@ -1381,11 +1394,19 @@
     {
       "time": 1778165389268,
       "value": 890.5386068075369
+    },
+    {
+      "time": 1778172340381,
+      "value": 253.95680719053777
+    },
+    {
+      "time": 1778172379430,
+      "value": 885.7142354972614
     }
   ],
   "dailyStart": 139.90867288848335,
   "dailyStartTime": 1778112000000,
-  "totalTrades": 48,
+  "totalTrades": 49,
   "wins": 15,
   "config": {
     "leverage": 10,
@@ -1417,5 +1438,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-07T14:49:49.269Z"
+  "lastRun": "2026-05-07T16:46:19.430Z"
 }
