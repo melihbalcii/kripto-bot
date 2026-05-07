@@ -1,5 +1,5 @@
 {
-  "balance": 190.46760539290332,
+  "balance": 196.01610228115743,
   "initialBalance": 1000,
   "positions": [
     {
@@ -25,18 +25,6 @@
       "stopLossPrice": 0.10122595,
       "takeProfitPrice": 0.0967381,
       "openTime": 1778058668116
-    },
-    {
-      "id": 1778073074588,
-      "symbol": "BNBUSDT",
-      "direction": "SHORT",
-      "entryPrice": 654.61,
-      "margin": 54.32325593563192,
-      "leverage": 10,
-      "size": 543.2325593563191,
-      "stopLossPrice": 664.4291499999999,
-      "takeProfitPrice": 634.9716999999999,
-      "openTime": 1778073074588
     },
     {
       "id": 1778103908774,
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.35423499999999997,
       "takeProfitPrice": 0.33852999999999994,
       "openTime": 1778172356870
+    },
+    {
+      "id": 1778192116568,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 634.65,
+      "margin": 65.3387007603858,
+      "leverage": 10,
+      "size": 653.387007603858,
+      "stopLossPrice": 625.1302499999999,
+      "takeProfitPrice": 653.6895,
+      "openTime": 1778192116568
     }
   ],
   "history": [
+    {
+      "id": 1778073074588,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 654.61,
+      "closePrice": 634.65,
+      "leverage": 10,
+      "pnl": 16.563941713007974,
+      "pnlPct": 30.49143764989847,
+      "reason": "TP",
+      "openTime": 1778073074588,
+      "closeTime": 1778192109469
+    },
     {
       "id": 1778000585292,
       "symbol": "TRXUSDT",
@@ -1414,12 +1427,20 @@
     {
       "time": 1778188086213,
       "value": 874.712776518173
+    },
+    {
+      "time": 1778192109469,
+      "value": 261.3548030415432
+    },
+    {
+      "time": 1778192147453,
+      "value": 884.3455479615428
     }
   ],
   "dailyStart": 139.90867288848335,
   "dailyStartTime": 1778112000000,
-  "totalTrades": 49,
-  "wins": 15,
+  "totalTrades": 50,
+  "wins": 16,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -1450,5 +1471,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-07T21:08:06.213Z"
+  "lastRun": "2026-05-07T22:15:47.453Z"
 }
