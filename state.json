@@ -1,5 +1,5 @@
 {
-  "balance": 196.01610228115743,
+  "balance": 188.54206239019928,
   "initialBalance": 1000,
   "positions": [
     {
@@ -87,18 +87,6 @@
       "openTime": 1778165360895
     },
     {
-      "id": 1778165363120,
-      "symbol": "DOGEUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1088,
-      "margin": 70.21697656427713,
-      "leverage": 10,
-      "size": 702.1697656427714,
-      "stopLossPrice": 0.107168,
-      "takeProfitPrice": 0.112064,
-      "openTime": 1778165363120
-    },
-    {
       "id": 1778172356870,
       "symbol": "TRXUSDT",
       "direction": "SHORT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 625.1302499999999,
       "takeProfitPrice": 653.6895,
       "openTime": 1778192116568
+    },
+    {
+      "id": 1778212362619,
+      "symbol": "DOGEUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1065,
+      "margin": 62.84735413006643,
+      "leverage": 10,
+      "size": 628.4735413006642,
+      "stopLossPrice": 0.1049025,
+      "takeProfitPrice": 0.109695,
+      "openTime": 1778212362619
     }
   ],
   "history": [
+    {
+      "id": 1778165363120,
+      "symbol": "DOGEUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1088,
+      "closePrice": 0.1065,
+      "leverage": 10,
+      "pnl": -14.843662325168859,
+      "pnlPct": -21.139705882352914,
+      "reason": "SL",
+      "openTime": 1778165363120,
+      "closeTime": 1778212350868
+    },
     {
       "id": 1778073074588,
       "symbol": "BNBUSDT",
@@ -1443,11 +1456,19 @@
     {
       "time": 1778198884886,
       "value": 888.3356374200118
+    },
+    {
+      "time": 1778212350868,
+      "value": 251.3894165202657
+    },
+    {
+      "time": 1778212388919,
+      "value": 885.5600251389293
     }
   ],
   "dailyStart": 196.01610228115743,
   "dailyStartTime": 1778198400000,
-  "totalTrades": 50,
+  "totalTrades": 51,
   "wins": 16,
   "config": {
     "leverage": 10,
@@ -1479,5 +1500,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-08T00:08:04.886Z"
+  "lastRun": "2026-05-08T03:53:08.919Z"
 }
