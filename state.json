@@ -1,5 +1,5 @@
 {
-  "balance": 160.07190233077432,
+  "balance": 158.48897466922767,
   "initialBalance": 1000,
   "positions": [
     {
@@ -99,18 +99,6 @@
       "openTime": 1778212362619
     },
     {
-      "id": 1778230480777,
-      "symbol": "NEARUSDT",
-      "direction": "SHORT",
-      "entryPrice": 1.543,
-      "margin": 62.11602926664551,
-      "leverage": 10,
-      "size": 621.1602926664551,
-      "stopLossPrice": 1.5661449999999997,
-      "takeProfitPrice": 1.49671,
-      "openTime": 1778230480777
-    },
-    {
       "id": 1778235648330,
       "symbol": "POLUSDT",
       "direction": "SHORT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.1028195,
       "takeProfitPrice": 0.098261,
       "openTime": 1778235648330
+    },
+    {
+      "id": 1778252835838,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1503,
+      "margin": 52.829658223075896,
+      "leverage": 10,
+      "size": 528.296582230759,
+      "stopLossPrice": 0.1480455,
+      "takeProfitPrice": 0.154809,
+      "openTime": 1778252835838
     }
   ],
   "history": [
+    {
+      "id": 1778230480777,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.543,
+      "closePrice": 1.57,
+      "leverage": 10,
+      "pnl": -10.869298705116249,
+      "pnlPct": -17.49837977965012,
+      "reason": "SL",
+      "openTime": 1778230480777,
+      "closeTime": 1778252814917
+    },
     {
       "id": 1778058668116,
       "symbol": "POLUSDT",
@@ -1522,11 +1535,19 @@
     {
       "time": 1778246521752,
       "value": 895.1795664037817
+    },
+    {
+      "time": 1778252814917,
+      "value": 211.31863289230358
+    },
+    {
+      "time": 1778252861348,
+      "value": 885.6202775663593
     }
   ],
   "dailyStart": 196.01610228115743,
   "dailyStartTime": 1778198400000,
-  "totalTrades": 53,
+  "totalTrades": 54,
   "wins": 17,
   "config": {
     "leverage": 10,
@@ -1558,5 +1579,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-08T13:22:01.752Z"
+  "lastRun": "2026-05-08T15:07:41.348Z"
 }
