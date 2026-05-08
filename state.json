@@ -1,5 +1,5 @@
 {
-  "balance": 120.14812899773861,
+  "balance": 111.7608250537429,
   "initialBalance": 1000,
   "positions": [
     {
@@ -111,19 +111,32 @@
       "openTime": 1778268461165
     },
     {
+      "id": 1778279821673,
+      "symbol": "OPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1767,
+      "margin": 37.253608351247635,
+      "leverage": 10,
+      "size": 372.53608351247635,
+      "stopLossPrice": 0.17935049999999997,
+      "takeProfitPrice": 0.171399,
+      "openTime": 1778279821673
+    }
+  ],
+  "history": [
+    {
       "id": 1778276402506,
       "symbol": "OPUSDT",
       "direction": "SHORT",
       "entryPrice": 0.1719,
-      "margin": 40.049376332579534,
+      "closePrice": 0.1767,
       "leverage": 10,
-      "size": 400.4937633257953,
-      "stopLossPrice": 0.17447849999999998,
-      "takeProfitPrice": 0.166743,
-      "openTime": 1778276402506
-    }
-  ],
-  "history": [
+      "pnl": -11.183071925327615,
+      "pnlPct": -27.92321116928446,
+      "reason": "SL",
+      "openTime": 1778276402506,
+      "closeTime": 1778279803409
+    },
     {
       "id": 1778272438792,
       "symbol": "OPUSDT",
@@ -1648,11 +1661,19 @@
     {
       "time": 1778276420666,
       "value": 892.5631454657404
+    },
+    {
+      "time": 1778279803409,
+      "value": 149.01443340499054
+    },
+    {
+      "time": 1778279839664,
+      "value": 878.7565896439772
     }
   ],
   "dailyStart": 196.01610228115743,
   "dailyStartTime": 1778198400000,
-  "totalTrades": 59,
+  "totalTrades": 60,
   "wins": 18,
   "config": {
     "leverage": 10,
@@ -1684,5 +1705,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-08T21:40:20.666Z"
+  "lastRun": "2026-05-08T22:37:19.664Z"
 }
