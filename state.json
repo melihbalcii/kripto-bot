@@ -1,5 +1,5 @@
 {
-  "balance": 170.93112624464106,
+  "balance": 156.62289346934983,
   "initialBalance": 1000,
   "positions": [
     {
@@ -99,18 +99,6 @@
       "openTime": 1778289722984
     },
     {
-      "id": 1778289730133,
-      "symbol": "OPUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1672,
-      "margin": 47.573418988961926,
-      "leverage": 10,
-      "size": 475.73418988961924,
-      "stopLossPrice": 0.16469199999999998,
-      "takeProfitPrice": 0.17221599999999998,
-      "openTime": 1778289730133
-    },
-    {
       "id": 1778301871270,
       "symbol": "AVAXUSDT",
       "direction": "LONG",
@@ -121,9 +109,34 @@
       "stopLossPrice": 9.82833,
       "takeProfitPrice": 10.27734,
       "openTime": 1778301871270
+    },
+    {
+      "id": 1778323985063,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1638,
+      "margin": 52.20763115644994,
+      "leverage": 10,
+      "size": 522.0763115644994,
+      "stopLossPrice": 0.161343,
+      "takeProfitPrice": 0.168714,
+      "openTime": 1778323985063
     }
   ],
   "history": [
+    {
+      "id": 1778289730133,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1672,
+      "closePrice": 0.1638,
+      "leverage": 10,
+      "pnl": -9.674020607803223,
+      "pnlPct": -20.33492822966499,
+      "reason": "SL",
+      "openTime": 1778289730133,
+      "closeTime": 1778323967100
+    },
     {
       "id": 1778192116568,
       "symbol": "BNBUSDT",
@@ -1744,11 +1757,19 @@
     {
       "time": 1778320401385,
       "value": 887.278102461159
+    },
+    {
+      "time": 1778323967100,
+      "value": 208.83052462579977
+    },
+    {
+      "time": 1778324003239,
+      "value": 884.5123780936625
     }
   ],
   "dailyStart": 111.7608250537429,
   "dailyStartTime": 1778284800000,
-  "totalTrades": 63,
+  "totalTrades": 64,
   "wins": 21,
   "config": {
     "leverage": 10,
@@ -1780,5 +1801,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-09T09:53:21.385Z"
+  "lastRun": "2026-05-09T10:53:23.239Z"
 }
