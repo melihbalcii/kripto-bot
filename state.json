@@ -1,5 +1,5 @@
 {
-  "balance": 161.63060271516736,
+  "balance": 167.36687902609196,
   "initialBalance": 1000,
   "positions": [
     {
@@ -37,18 +37,6 @@
       "stopLossPrice": 0.35423499999999997,
       "takeProfitPrice": 0.33852999999999994,
       "openTime": 1778172356870
-    },
-    {
-      "id": 1778268461165,
-      "symbol": "NEARUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.571,
-      "margin": 46.89769322390069,
-      "leverage": 10,
-      "size": 468.9769322390069,
-      "stopLossPrice": 1.547435,
-      "takeProfitPrice": 1.61813,
-      "openTime": 1778268461165
     },
     {
       "id": 1778289722984,
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.28978249999999994,
       "takeProfitPrice": 0.276935,
       "openTime": 1778435180888
+    },
+    {
+      "id": 1778443001164,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.62,
+      "margin": 55.78895967536399,
+      "leverage": 10,
+      "size": 557.8895967536399,
+      "stopLossPrice": 1.6442999999999999,
+      "takeProfitPrice": 1.5714000000000001,
+      "openTime": 1778443001164
     }
   ],
   "history": [
+    {
+      "id": 1778268461165,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.571,
+      "closePrice": 1.62,
+      "leverage": 10,
+      "pnl": 14.627542762387913,
+      "pnlPct": 31.19032463399119,
+      "reason": "TP",
+      "openTime": 1778268461165,
+      "closeTime": 1778442986637
+    },
     {
       "id": 1778401887374,
       "symbol": "SOLUSDT",
@@ -1984,12 +1997,20 @@
     {
       "time": 1778439322336,
       "value": 879.5016080149942
+    },
+    {
+      "time": 1778442986637,
+      "value": 223.15583870145596
+    },
+    {
+      "time": 1778443023317,
+      "value": 890.4301671811058
     }
   ],
   "dailyStart": 156.62289346934983,
   "dailyStartTime": 1778371200000,
-  "totalTrades": 71,
-  "wins": 23,
+  "totalTrades": 72,
+  "wins": 24,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -2020,5 +2041,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-10T18:55:22.336Z"
+  "lastRun": "2026-05-10T19:57:03.317Z"
 }
