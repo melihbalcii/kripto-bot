@@ -1,5 +1,5 @@
 {
-  "balance": 183.12209448996796,
+  "balance": 250.15300805121262,
   "initialBalance": 1000,
   "positions": [
     {
@@ -63,18 +63,6 @@
       "openTime": 1778323985063
     },
     {
-      "id": 1778428082622,
-      "symbol": "BNBUSDT",
-      "direction": "SHORT",
-      "entryPrice": 655.8,
-      "margin": 79.83812770334967,
-      "leverage": 10,
-      "size": 798.3812770334966,
-      "stopLossPrice": 665.637,
-      "takeProfitPrice": 636.126,
-      "openTime": 1778428082622
-    },
-    {
       "id": 1778431680710,
       "symbol": "XRPUSDT",
       "direction": "SHORT",
@@ -124,6 +112,19 @@
     }
   ],
   "history": [
+    {
+      "id": 1778428082622,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 655.8,
+      "closePrice": 666.32,
+      "leverage": 10,
+      "pnl": -12.807214142105005,
+      "pnlPct": -16.041476059774467,
+      "reason": "SL",
+      "openTime": 1778428082622,
+      "closeTime": 1778452110022
+    },
     {
       "id": 1778443001164,
       "symbol": "NEARUSDT",
@@ -2030,11 +2031,19 @@
     {
       "time": 1778448892441,
       "value": 938.0176157997896
+    },
+    {
+      "time": 1778452110022,
+      "value": 250.15300805121262
+    },
+    {
+      "time": 1778452147403,
+      "value": 925.658427096796
     }
   ],
   "dailyStart": 156.62289346934983,
   "dailyStartTime": 1778371200000,
-  "totalTrades": 73,
+  "totalTrades": 74,
   "wins": 25,
   "config": {
     "leverage": 10,
@@ -2066,5 +2075,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-10T21:34:52.441Z"
+  "lastRun": "2026-05-10T22:29:07.404Z"
 }
