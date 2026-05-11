@@ -1,5 +1,5 @@
 {
-  "balance": 143.59683421687814,
+  "balance": 160.98477270491824,
   "initialBalance": 1000,
   "positions": [
     {
@@ -49,18 +49,6 @@
       "stopLossPrice": 97.16595,
       "takeProfitPrice": 92.85810000000001,
       "openTime": 1778435162453
-    },
-    {
-      "id": 1778435180888,
-      "symbol": "ADAUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.2855,
-      "margin": 53.87686757172246,
-      "leverage": 10,
-      "size": 538.7686757172246,
-      "stopLossPrice": 0.28978249999999994,
-      "takeProfitPrice": 0.276935,
-      "openTime": 1778435180888
     },
     {
       "id": 1778455695304,
@@ -121,9 +109,34 @@
       "stopLossPrice": 1.330735,
       "takeProfitPrice": 1.39153,
       "openTime": 1778476397267
+    },
+    {
+      "id": 1778488625860,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.549,
+      "margin": 53.661590901639414,
+      "leverage": 10,
+      "size": 536.6159090163942,
+      "stopLossPrice": 1.5722349999999998,
+      "takeProfitPrice": 1.50253,
+      "openTime": 1778488625860
     }
   ],
   "history": [
+    {
+      "id": 1778435180888,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2855,
+      "closePrice": 0.2764,
+      "leverage": 10,
+      "pnl": 17.172661817957064,
+      "pnlPct": 31.87390542907179,
+      "reason": "TP",
+      "openTime": 1778435180888,
+      "closeTime": 1778488610111
+    },
     {
       "id": 1778455686067,
       "symbol": "LINKUSDT",
@@ -2165,12 +2178,20 @@
     {
       "time": 1778476406203,
       "value": 876.1589667121723
+    },
+    {
+      "time": 1778488610111,
+      "value": 214.64636360655766
+    },
+    {
+      "time": 1778488649019,
+      "value": 899.4605097008507
     }
   ],
   "dailyStart": 198.8453887611036,
   "dailyStartTime": 1778457600000,
-  "totalTrades": 80,
-  "wins": 26,
+  "totalTrades": 81,
+  "wins": 27,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -2201,5 +2222,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-11T05:13:26.203Z"
+  "lastRun": "2026-05-11T08:37:29.019Z"
 }
