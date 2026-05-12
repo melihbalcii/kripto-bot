@@ -1,5 +1,5 @@
 {
-  "balance": 168.9416692560349,
+  "balance": 146.99054882630634,
   "initialBalance": 1000,
   "positions": [
     {
@@ -63,30 +63,6 @@
       "openTime": 1778476373385
     },
     {
-      "id": 1778476392730,
-      "symbol": "AVAXUSDT",
-      "direction": "LONG",
-      "entryPrice": 10.03,
-      "margin": 63.8208152075014,
-      "leverage": 10,
-      "size": 638.2081520750139,
-      "stopLossPrice": 9.87955,
-      "takeProfitPrice": 10.3309,
-      "openTime": 1778476392730
-    },
-    {
-      "id": 1778476397267,
-      "symbol": "DOTUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.351,
-      "margin": 47.86561140562605,
-      "leverage": 10,
-      "size": 478.6561140562605,
-      "stopLossPrice": 1.330735,
-      "takeProfitPrice": 1.39153,
-      "openTime": 1778476397267
-    },
-    {
       "id": 1778519575973,
       "symbol": "POLUSDT",
       "direction": "LONG",
@@ -121,9 +97,59 @@
       "stopLossPrice": 94.3039,
       "takeProfitPrice": 98.6122,
       "openTime": 1778578364988
+    },
+    {
+      "id": 1778585640344,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1539,
+      "margin": 65.32913281169171,
+      "leverage": 10,
+      "size": 653.291328116917,
+      "stopLossPrice": 0.15159150000000002,
+      "takeProfitPrice": 0.15851700000000002,
+      "openTime": 1778585640344
+    },
+    {
+      "id": 1778585647018,
+      "symbol": "AVAXUSDT",
+      "direction": "LONG",
+      "entryPrice": 9.849,
+      "margin": 48.996849608768784,
+      "leverage": 10,
+      "size": 489.96849608768787,
+      "stopLossPrice": 9.701265,
+      "takeProfitPrice": 10.14447,
+      "openTime": 1778585647018
     }
   ],
   "history": [
+    {
+      "id": 1778476397267,
+      "symbol": "DOTUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.351,
+      "closePrice": 1.329,
+      "leverage": 10,
+      "pnl": -7.794548119346959,
+      "pnlPct": -16.28423390081423,
+      "reason": "SL",
+      "openTime": 1778476397267,
+      "closeTime": 1778585621935
+    },
+    {
+      "id": 1778476392730,
+      "symbol": "AVAXUSDT",
+      "direction": "LONG",
+      "entryPrice": 10.03,
+      "closePrice": 9.849,
+      "leverage": 10,
+      "pnl": -11.517016503048554,
+      "pnlPct": -18.045862412761632,
+      "reason": "SL",
+      "openTime": 1778476392730,
+      "closeTime": 1778585621935
+    },
     {
       "id": 1778488625860,
       "symbol": "NEARUSDT",
@@ -2281,11 +2307,23 @@
     {
       "time": 1778578396193,
       "value": 853.4046843732847
+    },
+    {
+      "time": 1778585621935,
+      "value": 221.24546796048776
+    },
+    {
+      "time": 1778585621935,
+      "value": 261.31653124676683
+    },
+    {
+      "time": 1778585657810,
+      "value": 832.6166300399435
     }
   ],
   "dailyStart": 166.2297234315648,
   "dailyStartTime": 1778544000000,
-  "totalTrades": 84,
+  "totalTrades": 86,
   "wins": 27,
   "config": {
     "leverage": 10,
@@ -2317,5 +2355,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-12T09:33:16.193Z"
+  "lastRun": "2026-05-12T11:34:17.811Z"
 }
