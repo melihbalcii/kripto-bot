@@ -1,5 +1,5 @@
 {
-  "balance": 150.31914499321476,
+  "balance": 201.07200309524075,
   "initialBalance": 1000,
   "positions": [
     {
@@ -25,18 +25,6 @@
       "stopLossPrice": 0.35423499999999997,
       "takeProfitPrice": 0.33852999999999994,
       "openTime": 1778172356870
-    },
-    {
-      "id": 1778476373385,
-      "symbol": "BNBUSDT",
-      "direction": "LONG",
-      "entryPrice": 651.96,
-      "margin": 85.09442027666853,
-      "leverage": 10,
-      "size": 850.9442027666853,
-      "stopLossPrice": 642.1806,
-      "takeProfitPrice": 671.5188,
-      "openTime": 1778476373385
     },
     {
       "id": 1778578362727,
@@ -121,9 +109,34 @@
       "stopLossPrice": 58.43355,
       "takeProfitPrice": 55.8429,
       "openTime": 1778609059367
+    },
+    {
+      "id": 1778635771553,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 677,
+      "margin": 67.02400103174692,
+      "leverage": 10,
+      "size": 670.2400103174692,
+      "stopLossPrice": 687.155,
+      "takeProfitPrice": 656.6899999999999,
+      "openTime": 1778635771553
     }
   ],
   "history": [
+    {
+      "id": 1778476373385,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 651.96,
+      "closePrice": 677,
+      "leverage": 10,
+      "pnl": 32.68243885710437,
+      "pnlPct": 38.407264249340386,
+      "reason": "TP",
+      "openTime": 1778476373385,
+      "closeTime": 1778635764162
+    },
     {
       "id": 1778455695304,
       "symbol": "ATOMUSDT",
@@ -2432,12 +2445,20 @@
     {
       "time": 1778629444320,
       "value": 837.0021397101176
+    },
+    {
+      "time": 1778635764162,
+      "value": 268.0960041269877
+    },
+    {
+      "time": 1778635804666,
+      "value": 882.331438813714
     }
   ],
-  "dailyStart": 166.2297234315648,
-  "dailyStartTime": 1778544000000,
-  "totalTrades": 91,
-  "wins": 29,
+  "dailyStart": 150.31914499321476,
+  "dailyStartTime": 1778630400000,
+  "totalTrades": 92,
+  "wins": 30,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -2468,5 +2489,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-12T23:44:04.320Z"
+  "lastRun": "2026-05-13T01:30:04.666Z"
 }
