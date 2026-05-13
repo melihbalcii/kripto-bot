@@ -1,5 +1,5 @@
 {
-  "balance": 201.07200309524075,
+  "balance": 182.37833375847154,
   "initialBalance": 1000,
   "positions": [
     {
@@ -99,18 +99,6 @@
       "openTime": 1778601556173
     },
     {
-      "id": 1778609059367,
-      "symbol": "LTCUSDT",
-      "direction": "SHORT",
-      "entryPrice": 57.57,
-      "margin": 50.10638166440492,
-      "leverage": 10,
-      "size": 501.0638166440492,
-      "stopLossPrice": 58.43355,
-      "takeProfitPrice": 55.8429,
-      "openTime": 1778609059367
-    },
-    {
       "id": 1778635771553,
       "symbol": "BNBUSDT",
       "direction": "SHORT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 687.155,
       "takeProfitPrice": 656.6899999999999,
       "openTime": 1778635771553
+    },
+    {
+      "id": 1778660173325,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.611,
+      "margin": 60.79277791949051,
+      "leverage": 10,
+      "size": 607.9277791949052,
+      "stopLossPrice": 1.586835,
+      "takeProfitPrice": 1.65933,
+      "openTime": 1778660173325
     }
   ],
   "history": [
+    {
+      "id": 1778609059367,
+      "symbol": "LTCUSDT",
+      "direction": "SHORT",
+      "entryPrice": 57.57,
+      "closePrice": 58.49,
+      "leverage": 10,
+      "pnl": -8.007273081683621,
+      "pnlPct": -15.980545422963377,
+      "reason": "SL",
+      "openTime": 1778609059367,
+      "closeTime": 1778660159229
+    },
     {
       "id": 1778476373385,
       "symbol": "BNBUSDT",
@@ -2457,11 +2470,19 @@
     {
       "time": 1778650140826,
       "value": 890.0798745476408
+    },
+    {
+      "time": 1778660159229,
+      "value": 243.17111167796205
+    },
+    {
+      "time": 1778660196217,
+      "value": 895.2967510363267
     }
   ],
   "dailyStart": 150.31914499321476,
   "dailyStartTime": 1778630400000,
-  "totalTrades": 92,
+  "totalTrades": 93,
   "wins": 30,
   "config": {
     "leverage": 10,
@@ -2493,5 +2514,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-13T05:29:00.826Z"
+  "lastRun": "2026-05-13T08:16:36.217Z"
 }
