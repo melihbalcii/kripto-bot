@@ -1,19 +1,7 @@
 {
-  "balance": 74.46259937758762,
+  "balance": 95.55044034216982,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1778172356870,
-      "symbol": "TRXUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.349,
-      "margin": 63.48920179763444,
-      "leverage": 10,
-      "size": 634.8920179763444,
-      "stopLossPrice": 0.35423499999999997,
-      "takeProfitPrice": 0.33852999999999994,
-      "openTime": 1778172356870
-    },
     {
       "id": 1778601542242,
       "symbol": "XRPUSDT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.09380155,
       "takeProfitPrice": 0.09808689999999999,
       "openTime": 1778738643424
+    },
+    {
+      "id": 1778757099106,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3548,
+      "margin": 31.85014678072327,
+      "leverage": 10,
+      "size": 318.5014678072327,
+      "stopLossPrice": 0.36012199999999994,
+      "takeProfitPrice": 0.344156,
+      "openTime": 1778757099106
     }
   ],
   "history": [
+    {
+      "id": 1778172356870,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.349,
+      "closePrice": 0.3548,
+      "leverage": 10,
+      "pnl": -10.551214052328984,
+      "pnlPct": -16.618911174785183,
+      "reason": "SL",
+      "openTime": 1778172356870,
+      "closeTime": 1778757082674
+    },
     {
       "id": 1778688138162,
       "symbol": "POLUSDT",
@@ -2658,11 +2671,19 @@
     {
       "time": 1778748615649,
       "value": 808.107850588006
+    },
+    {
+      "time": 1778757082674,
+      "value": 127.40058712289309
+    },
+    {
+      "time": 1778757119176,
+      "value": 784.4725717127196
     }
   ],
   "dailyStart": 73.04013848037903,
   "dailyStartTime": 1778716800000,
-  "totalTrades": 101,
+  "totalTrades": 102,
   "wins": 31,
   "config": {
     "leverage": 10,
@@ -2694,5 +2715,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-14T08:50:15.649Z"
+  "lastRun": "2026-05-14T11:11:59.176Z"
 }
