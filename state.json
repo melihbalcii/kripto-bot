@@ -1,19 +1,7 @@
 {
-  "balance": 95.55044034216982,
+  "balance": 162.903884755695,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1778601542242,
-      "symbol": "XRPUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.424,
-      "margin": 89.60798024442627,
-      "leverage": 10,
-      "size": 896.0798024442627,
-      "stopLossPrice": 1.4026399999999999,
-      "takeProfitPrice": 1.46672,
-      "openTime": 1778601542242
-    },
     {
       "id": 1778635771553,
       "symbol": "BNBUSDT",
@@ -63,18 +51,6 @@
       "openTime": 1778688121525
     },
     {
-      "id": 1778688131160,
-      "symbol": "NEARUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.557,
-      "margin": 57.71072670054639,
-      "leverage": 10,
-      "size": 577.1072670054639,
-      "stopLossPrice": 1.533645,
-      "takeProfitPrice": 1.60371,
-      "openTime": 1778688131160
-    },
-    {
       "id": 1778688135905,
       "symbol": "OPUSDT",
       "direction": "LONG",
@@ -121,9 +97,59 @@
       "stopLossPrice": 0.36012199999999994,
       "takeProfitPrice": 0.344156,
       "openTime": 1778757099106
+    },
+    {
+      "id": 1778772653579,
+      "symbol": "XRPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.47,
+      "margin": 72.40172655808666,
+      "leverage": 10,
+      "size": 724.0172655808667,
+      "stopLossPrice": 1.4920499999999999,
+      "takeProfitPrice": 1.4259,
+      "openTime": 1778772653579
+    },
+    {
+      "id": 1778772658320,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.605,
+      "margin": 54.301294918565,
+      "leverage": 10,
+      "size": 543.01294918565,
+      "stopLossPrice": 1.6290749999999998,
+      "takeProfitPrice": 1.5568499999999998,
+      "openTime": 1778772658320
     }
   ],
   "history": [
+    {
+      "id": 1778688131160,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.557,
+      "closePrice": 1.605,
+      "leverage": 10,
+      "pnl": 17.791360832538402,
+      "pnlPct": 30.828516377649358,
+      "reason": "TP",
+      "openTime": 1778688131160,
+      "closeTime": 1778772644145
+    },
+    {
+      "id": 1778601542242,
+      "symbol": "XRPUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.424,
+      "closePrice": 1.47,
+      "leverage": 10,
+      "pnl": 28.946398112665815,
+      "pnlPct": 32.30337078651688,
+      "reason": "TP",
+      "openTime": 1778601542242,
+      "closeTime": 1778772644145
+    },
     {
       "id": 1778172356870,
       "symbol": "TRXUSDT",
@@ -2683,12 +2709,24 @@
     {
       "time": 1778763893818,
       "value": 794.6004934569232
+    },
+    {
+      "time": 1778772644145,
+      "value": 214.1048186992619
+    },
+    {
+      "time": 1778772644145,
+      "value": 289.60690623234666
+    },
+    {
+      "time": 1778772685340,
+      "value": 880.6349534203039
     }
   ],
   "dailyStart": 73.04013848037903,
   "dailyStartTime": 1778716800000,
-  "totalTrades": 102,
-  "wins": 31,
+  "totalTrades": 104,
+  "wins": 33,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -2719,5 +2757,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-14T13:04:53.818Z"
+  "lastRun": "2026-05-14T15:31:25.340Z"
 }
