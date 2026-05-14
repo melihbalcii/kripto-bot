@@ -1,5 +1,5 @@
 {
-  "balance": 157.3956934705908,
+  "balance": 187.18383217216928,
   "initialBalance": 1000,
   "positions": [
     {
@@ -99,18 +99,6 @@
       "openTime": 1778779593489
     },
     {
-      "id": 1778786210800,
-      "symbol": "XRPUSDT",
-      "direction": "SHORT",
-      "entryPrice": 1.542,
-      "margin": 69.95364154248479,
-      "leverage": 10,
-      "size": 699.5364154248479,
-      "stopLossPrice": 1.56513,
-      "takeProfitPrice": 1.49574,
-      "openTime": 1778786210800
-    },
-    {
       "id": 1778786213017,
       "symbol": "DOGEUSDT",
       "direction": "SHORT",
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.1186535,
       "takeProfitPrice": 0.113393,
       "openTime": 1778786213017
+    },
+    {
+      "id": 1778800278653,
+      "symbol": "XRPUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.493,
+      "margin": 62.39461072405643,
+      "leverage": 10,
+      "size": 623.9461072405643,
+      "stopLossPrice": 1.4706050000000002,
+      "takeProfitPrice": 1.5377900000000002,
+      "openTime": 1778800278653
     }
   ],
   "history": [
+    {
+      "id": 1778786210800,
+      "symbol": "XRPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.542,
+      "closePrice": 1.493,
+      "leverage": 10,
+      "pnl": 22.229107883150128,
+      "pnlPct": 31.776913099870253,
+      "reason": "TP",
+      "openTime": 1778786210800,
+      "closeTime": 1778800268484
+    },
     {
       "id": 1778772653579,
       "symbol": "XRPUSDT",
@@ -2805,12 +2818,20 @@
     {
       "time": 1778796371226,
       "value": 882.9890815950746
+    },
+    {
+      "time": 1778800268484,
+      "value": 249.5784428962257
+    },
+    {
+      "time": 1778800307404,
+      "value": 889.2962930520564
     }
   ],
   "dailyStart": 73.04013848037903,
   "dailyStartTime": 1778716800000,
-  "totalTrades": 108,
-  "wins": 35,
+  "totalTrades": 109,
+  "wins": 36,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -2841,5 +2862,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-14T22:06:11.227Z"
+  "lastRun": "2026-05-14T23:11:47.404Z"
 }
