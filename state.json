@@ -1,5 +1,5 @@
 {
-  "balance": 209.18352141158564,
+  "balance": 156.88764105868924,
   "initialBalance": 1000,
   "positions": [
     {
@@ -109,6 +109,18 @@
       "stopLossPrice": 1.963105,
       "takeProfitPrice": 2.0527900000000003,
       "openTime": 1778839540695
+    },
+    {
+      "id": 1778846823828,
+      "symbol": "LTCUSDT",
+      "direction": "LONG",
+      "entryPrice": 57.99,
+      "margin": 52.29588035289641,
+      "leverage": 10,
+      "size": 522.9588035289642,
+      "stopLossPrice": 57.12015,
+      "takeProfitPrice": 59.7297,
+      "openTime": 1778846823828
     }
   ],
   "history": [
@@ -2881,6 +2893,10 @@
     {
       "time": 1778839542696,
       "value": 874.4785486121514
+    },
+    {
+      "time": 1778846829300,
+      "value": 876.670633157982
     }
   ],
   "dailyStart": 187.18383217216928,
@@ -2917,5 +2933,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-15T10:05:42.696Z"
+  "lastRun": "2026-05-15T12:07:09.300Z"
 }
