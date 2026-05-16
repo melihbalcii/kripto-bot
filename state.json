@@ -1,5 +1,5 @@
 {
-  "balance": 116.39530150308497,
+  "balance": 146.32781009759773,
   "initialBalance": 1000,
   "positions": [
     {
@@ -37,18 +37,6 @@
       "stopLossPrice": 2160.90285,
       "takeProfitPrice": 2259.6243,
       "openTime": 1778918227314
-    },
-    {
-      "id": 1778918229572,
-      "symbol": "SOLUSDT",
-      "direction": "LONG",
-      "entryPrice": 87.39,
-      "margin": 94.75590348832478,
-      "leverage": 10,
-      "size": 947.5590348832477,
-      "stopLossPrice": 86.07915,
-      "takeProfitPrice": 90.0117,
-      "openTime": 1778918229572
     },
     {
       "id": 1778918234087,
@@ -121,9 +109,34 @@
       "stopLossPrice": 0.0875271,
       "takeProfitPrice": 0.09152579999999999,
       "openTime": 1778924486505
+    },
+    {
+      "id": 1778928533809,
+      "symbol": "SOLUSDT",
+      "direction": "LONG",
+      "entryPrice": 85.91,
+      "margin": 48.77593669919924,
+      "leverage": 10,
+      "size": 487.7593669919924,
+      "stopLossPrice": 84.62134999999999,
+      "takeProfitPrice": 88.4873,
+      "openTime": 1778928533809
     }
   ],
   "history": [
+    {
+      "id": 1778918229572,
+      "symbol": "SOLUSDT",
+      "direction": "LONG",
+      "entryPrice": 87.39,
+      "closePrice": 85.91,
+      "leverage": 10,
+      "pnl": -16.047458194612776,
+      "pnlPct": -16.93557615287795,
+      "reason": "SL",
+      "openTime": 1778918229572,
+      "closeTime": 1778928528995
+    },
     {
       "id": 1778855682498,
       "symbol": "POLUSDT",
@@ -3234,11 +3247,19 @@
     {
       "time": 1778924501773,
       "value": 789.3363393928001
+    },
+    {
+      "time": 1778928528995,
+      "value": 195.10374679679697
+    },
+    {
+      "time": 1778928565335,
+      "value": 776.2969139548144
     }
   ],
   "dailyStart": 129.3322129693488,
   "dailyStartTime": 1778889600000,
-  "totalTrades": 129,
+  "totalTrades": 130,
   "wins": 43,
   "config": {
     "leverage": 10,
@@ -3270,5 +3291,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-16T09:41:41.774Z"
+  "lastRun": "2026-05-16T10:49:25.336Z"
 }
