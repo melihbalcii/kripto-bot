@@ -1,19 +1,7 @@
 {
-  "balance": 89.94408026430828,
+  "balance": 116.39530150308497,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1778635771553,
-      "symbol": "BNBUSDT",
-      "direction": "SHORT",
-      "entryPrice": 677,
-      "margin": 67.02400103174692,
-      "leverage": 10,
-      "size": 670.2400103174692,
-      "stopLossPrice": 687.155,
-      "takeProfitPrice": 656.6899999999999,
-      "openTime": 1778635771553
-    },
     {
       "id": 1778757099106,
       "symbol": "TRXUSDT",
@@ -25,18 +13,6 @@
       "stopLossPrice": 0.36012199999999994,
       "takeProfitPrice": 0.344156,
       "openTime": 1778757099106
-    },
-    {
-      "id": 1778855682498,
-      "symbol": "POLUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.09024,
-      "margin": 32.456961800695,
-      "leverage": 10,
-      "size": 324.56961800695,
-      "stopLossPrice": 0.0888864,
-      "takeProfitPrice": 0.09294720000000001,
-      "openTime": 1778855682498
     },
     {
       "id": 1778918225185,
@@ -121,9 +97,59 @@
       "stopLossPrice": 0.1307095,
       "takeProfitPrice": 0.13668100000000002,
       "openTime": 1778918243014
+    },
+    {
+      "id": 1778924473271,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 654.31,
+      "margin": 51.731245112482206,
+      "leverage": 10,
+      "size": 517.312451124822,
+      "stopLossPrice": 644.4953499999999,
+      "takeProfitPrice": 673.9393,
+      "openTime": 1778924473271
+    },
+    {
+      "id": 1778924486505,
+      "symbol": "POLUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.08886,
+      "margin": 38.79843383436165,
+      "leverage": 10,
+      "size": 387.9843383436165,
+      "stopLossPrice": 0.0875271,
+      "takeProfitPrice": 0.09152579999999999,
+      "openTime": 1778924486505
     }
   ],
   "history": [
+    {
+      "id": 1778855682498,
+      "symbol": "POLUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.09024,
+      "closePrice": 0.08886,
+      "leverage": 10,
+      "pnl": -4.963498147712689,
+      "pnlPct": -15.292553191489432,
+      "reason": "SL",
+      "openTime": 1778855682498,
+      "closeTime": 1778924466036
+    },
+    {
+      "id": 1778635771553,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 677,
+      "closePrice": 654.31,
+      "leverage": 10,
+      "pnl": 22.463435500891304,
+      "pnlPct": 33.51550960118176,
+      "reason": "TP",
+      "openTime": 1778635771553,
+      "closeTime": 1778924466036
+    },
     {
       "id": 1778910601082,
       "symbol": "NEARUSDT",
@@ -3196,12 +3222,24 @@
     {
       "time": 1778918260479,
       "value": 822.3419888300738
+    },
+    {
+      "time": 1778924466036,
+      "value": 179.4315167969465
+    },
+    {
+      "time": 1778924466036,
+      "value": 206.92498044992882
+    },
+    {
+      "time": 1778924501773,
+      "value": 789.3363393928001
     }
   ],
   "dailyStart": 129.3322129693488,
   "dailyStartTime": 1778889600000,
-  "totalTrades": 127,
-  "wins": 42,
+  "totalTrades": 129,
+  "wins": 43,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -3232,5 +3270,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-16T07:57:40.479Z"
+  "lastRun": "2026-05-16T09:41:41.774Z"
 }
