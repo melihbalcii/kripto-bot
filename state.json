@@ -1,5 +1,5 @@
 {
-  "balance": 151.38552850427544,
+  "balance": 132.6361656807453,
   "initialBalance": 1000,
   "positions": [
     {
@@ -63,18 +63,6 @@
       "openTime": 1778918236333
     },
     {
-      "id": 1778918243014,
-      "symbol": "OPUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1327,
-      "margin": 29.98136008810276,
-      "leverage": 10,
-      "size": 299.8136008810276,
-      "stopLossPrice": 0.1307095,
-      "takeProfitPrice": 0.13668100000000002,
-      "openTime": 1778918243014
-    },
-    {
       "id": 1778924473271,
       "symbol": "BNBUSDT",
       "direction": "LONG",
@@ -121,9 +109,34 @@
       "stopLossPrice": 1.5641149999999997,
       "takeProfitPrice": 1.49477,
       "openTime": 1779009825991
+    },
+    {
+      "id": 1779050579584,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2548,
+      "margin": 44.2120552269151,
+      "leverage": 10,
+      "size": 442.12055226915095,
+      "stopLossPrice": 0.258622,
+      "takeProfitPrice": 0.24715600000000001,
+      "openTime": 1779050579584
     }
   ],
   "history": [
+    {
+      "id": 1778918243014,
+      "symbol": "OPUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1327,
+      "closePrice": 0.1307,
+      "leverage": 10,
+      "pnl": -4.518667684717827,
+      "pnlPct": -15.071590052750574,
+      "reason": "SL",
+      "openTime": 1778918243014,
+      "closeTime": 1779050555346
+    },
     {
       "id": 1778918238535,
       "symbol": "NEARUSDT",
@@ -3389,11 +3402,19 @@
     {
       "time": 1779047540460,
       "value": 849.1265949215218
+    },
+    {
+      "time": 1779050555346,
+      "value": 176.8482209076604
+    },
+    {
+      "time": 1779050594316,
+      "value": 837.7592959118417
     }
   ],
   "dailyStart": 146.32781009759773,
   "dailyStartTime": 1778976000000,
-  "totalTrades": 132,
+  "totalTrades": 133,
   "wins": 45,
   "config": {
     "leverage": 10,
@@ -3425,5 +3446,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-17T19:52:20.460Z"
+  "lastRun": "2026-05-17T20:43:14.316Z"
 }
