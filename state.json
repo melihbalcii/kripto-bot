@@ -1,5 +1,5 @@
 {
-  "balance": 146.32781009759773,
+  "balance": 149.84761489389317,
   "initialBalance": 1000,
   "positions": [
     {
@@ -99,18 +99,6 @@
       "openTime": 1778924473271
     },
     {
-      "id": 1778924486505,
-      "symbol": "POLUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.08886,
-      "margin": 38.79843383436165,
-      "leverage": 10,
-      "size": 387.9843383436165,
-      "stopLossPrice": 0.0875271,
-      "takeProfitPrice": 0.09152579999999999,
-      "openTime": 1778924486505
-    },
-    {
       "id": 1778928533809,
       "symbol": "SOLUSDT",
       "direction": "LONG",
@@ -121,9 +109,34 @@
       "stopLossPrice": 84.62134999999999,
       "takeProfitPrice": 88.4873,
       "openTime": 1778928533809
+    },
+    {
+      "id": 1778994417075,
+      "symbol": "POLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.09222,
+      "margin": 49.94920496463106,
+      "leverage": 10,
+      "size": 499.4920496463106,
+      "stopLossPrice": 0.09360329999999999,
+      "takeProfitPrice": 0.08945339999999999,
+      "openTime": 1778994417076
     }
   ],
   "history": [
+    {
+      "id": 1778924486505,
+      "symbol": "POLUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.08886,
+      "closePrice": 0.09222,
+      "leverage": 10,
+      "pnl": 14.670575926564846,
+      "pnlPct": 37.81228899392304,
+      "reason": "TP",
+      "openTime": 1778924486505,
+      "closeTime": 1778994396785
+    },
     {
       "id": 1778918229572,
       "symbol": "SOLUSDT",
@@ -3307,12 +3320,20 @@
     {
       "time": 1778981087715,
       "value": 788.2318015024885
+    },
+    {
+      "time": 1778994396785,
+      "value": 199.79681985852423
+    },
+    {
+      "time": 1778994435595,
+      "value": 834.8910256565348
     }
   ],
   "dailyStart": 146.32781009759773,
   "dailyStartTime": 1778976000000,
-  "totalTrades": 130,
-  "wins": 43,
+  "totalTrades": 131,
+  "wins": 44,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -3343,5 +3364,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-17T01:24:47.716Z"
+  "lastRun": "2026-05-17T05:07:15.595Z"
 }
