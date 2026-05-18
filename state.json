@@ -1,5 +1,5 @@
 {
-  "balance": 107.23306542386183,
+  "balance": 150.19474218576545,
   "initialBalance": 1000,
   "positions": [
     {
@@ -37,18 +37,6 @@
       "stopLossPrice": 0.258622,
       "takeProfitPrice": 0.24715600000000001,
       "openTime": 1779050579584
-    },
-    {
-      "id": 1779061272034,
-      "symbol": "NEARUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.489,
-      "margin": 57.026181036095586,
-      "leverage": 10,
-      "size": 570.2618103609559,
-      "stopLossPrice": 1.466665,
-      "takeProfitPrice": 1.53367,
-      "openTime": 1779061272034
     },
     {
       "id": 1779068132131,
@@ -121,9 +109,34 @@
       "stopLossPrice": 8.938875,
       "takeProfitPrice": 9.347249999999999,
       "openTime": 1779098846946
+    },
+    {
+      "id": 1779135267011,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.583,
+      "margin": 50.06491406192182,
+      "leverage": 10,
+      "size": 500.6491406192182,
+      "stopLossPrice": 1.6067449999999999,
+      "takeProfitPrice": 1.53551,
+      "openTime": 1779135267011
     }
   ],
   "history": [
+    {
+      "id": 1779061272034,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.489,
+      "closePrice": 1.583,
+      "leverage": 10,
+      "pnl": 36.000409787729865,
+      "pnlPct": 63.129617192746714,
+      "reason": "TP",
+      "openTime": 1779061272034,
+      "closeTime": 1779135252924
+    },
     {
       "id": 1779068143574,
       "symbol": "DOGEUSDT",
@@ -3599,12 +3612,20 @@
     {
       "time": 1779128958734,
       "value": 721.9866115340509
+    },
+    {
+      "time": 1779135252924,
+      "value": 200.25965624768727
+    },
+    {
+      "time": 1779135288781,
+      "value": 793.2785511770269
     }
   ],
   "dailyStart": 171.07854310828677,
   "dailyStartTime": 1779062400000,
-  "totalTrades": 142,
-  "wins": 46,
+  "totalTrades": 143,
+  "wins": 47,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -3635,5 +3656,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-18T18:29:18.734Z"
+  "lastRun": "2026-05-18T20:14:48.781Z"
 }
