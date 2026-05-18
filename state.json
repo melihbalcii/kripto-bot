@@ -1,5 +1,5 @@
 {
-  "balance": 119.16107045960409,
+  "balance": 107.23306542386183,
   "initialBalance": 1000,
   "positions": [
     {
@@ -13,18 +13,6 @@
       "stopLossPrice": 0.36012199999999994,
       "takeProfitPrice": 0.344156,
       "openTime": 1778757099106
-    },
-    {
-      "id": 1778928533809,
-      "symbol": "SOLUSDT",
-      "direction": "LONG",
-      "entryPrice": 85.91,
-      "margin": 48.77593669919924,
-      "leverage": 10,
-      "size": 487.7593669919924,
-      "stopLossPrice": 84.62134999999999,
-      "takeProfitPrice": 88.4873,
-      "openTime": 1778928533809
     },
     {
       "id": 1778994417075,
@@ -111,19 +99,57 @@
       "openTime": 1779068141337
     },
     {
+      "id": 1779098832183,
+      "symbol": "DOGEUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1041,
+      "margin": 47.65914018838304,
+      "leverage": 10,
+      "size": 476.59140188383043,
+      "stopLossPrice": 0.10253849999999999,
+      "takeProfitPrice": 0.107223,
+      "openTime": 1779098832183
+    },
+    {
+      "id": 1779098846946,
+      "symbol": "AVAXUSDT",
+      "direction": "LONG",
+      "entryPrice": 9.075,
+      "margin": 35.74435514128728,
+      "leverage": 10,
+      "size": 357.4435514128728,
+      "stopLossPrice": 8.938875,
+      "takeProfitPrice": 9.347249999999999,
+      "openTime": 1779098846946
+    }
+  ],
+  "history": [
+    {
       "id": 1779068143574,
       "symbol": "DOGEUSDT",
       "direction": "LONG",
       "entryPrice": 0.1063,
-      "margin": 39.72035681986803,
+      "closePrice": 0.1041,
       "leverage": 10,
-      "size": 397.2035681986803,
-      "stopLossPrice": 0.1047055,
-      "takeProfitPrice": 0.109489,
-      "openTime": 1779068143574
-    }
-  ],
-  "history": [
+      "pnl": -8.220581844187203,
+      "pnlPct": -20.696142991533467,
+      "reason": "SL",
+      "openTime": 1779068143574,
+      "closeTime": 1779098820442
+    },
+    {
+      "id": 1778928533809,
+      "symbol": "SOLUSDT",
+      "direction": "LONG",
+      "entryPrice": 85.91,
+      "closePrice": 84.36,
+      "leverage": 10,
+      "pnl": -8.800221380952006,
+      "pnlPct": -18.04213712024208,
+      "reason": "SL",
+      "openTime": 1778928533809,
+      "closeTime": 1779098820442
+    },
     {
       "id": 1779061260420,
       "symbol": "ETHUSDT",
@@ -3549,11 +3575,23 @@
     {
       "time": 1779083883919,
       "value": 754.3451082496033
+    },
+    {
+      "time": 1779098820442,
+      "value": 159.13678577785134
+    },
+    {
+      "time": 1779098820442,
+      "value": 190.63656075353217
+    },
+    {
+      "time": 1779098857688,
+      "value": 733.5223664932773
     }
   ],
   "dailyStart": 171.07854310828677,
   "dailyStartTime": 1779062400000,
-  "totalTrades": 140,
+  "totalTrades": 142,
   "wins": 46,
   "config": {
     "leverage": 10,
@@ -3585,5 +3623,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-18T05:58:03.919Z"
+  "lastRun": "2026-05-18T10:07:37.689Z"
 }
