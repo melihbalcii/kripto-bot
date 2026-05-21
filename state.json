@@ -1,31 +1,7 @@
 {
-  "balance": 151.428926987507,
+  "balance": 132.29122802521334,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1778757099106,
-      "symbol": "TRXUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.3548,
-      "margin": 31.85014678072327,
-      "leverage": 10,
-      "size": 318.5014678072327,
-      "stopLossPrice": 0.36012199999999994,
-      "takeProfitPrice": 0.344156,
-      "openTime": 1778757099106
-    },
-    {
-      "id": 1779050579584,
-      "symbol": "ADAUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.2548,
-      "margin": 44.2120552269151,
-      "leverage": 10,
-      "size": 442.12055226915095,
-      "stopLossPrice": 0.258622,
-      "takeProfitPrice": 0.24715600000000001,
-      "openTime": 1779050579584
-    },
     {
       "id": 1779068132131,
       "symbol": "BTCUSDT",
@@ -121,9 +97,59 @@
       "stopLossPrice": 1.72375,
       "takeProfitPrice": 1.8025,
       "openTime": 1779351664247
+    },
+    {
+      "id": 1779363811514,
+      "symbol": "SOLUSDT",
+      "direction": "LONG",
+      "entryPrice": 85.74,
+      "margin": 58.79610134453925,
+      "leverage": 10,
+      "size": 587.9610134453925,
+      "stopLossPrice": 84.45389999999999,
+      "takeProfitPrice": 88.31219999999999,
+      "openTime": 1779363811514
+    },
+    {
+      "id": 1779363818392,
+      "symbol": "DOGEUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.1043,
+      "margin": 44.09707600840444,
+      "leverage": 10,
+      "size": 440.9707600840444,
+      "stopLossPrice": 0.10273550000000001,
+      "takeProfitPrice": 0.10742900000000001,
+      "openTime": 1779363818392
     }
   ],
   "history": [
+    {
+      "id": 1779050579584,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2548,
+      "closePrice": 0.2469,
+      "leverage": 10,
+      "pnl": 13.70781932074686,
+      "pnlPct": 31.00470957613821,
+      "reason": "TP",
+      "openTime": 1779050579584,
+      "closeTime": 1779363806220
+    },
+    {
+      "id": 1778757099106,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3548,
+      "closePrice": 0.3615,
+      "leverage": 10,
+      "pnl": -6.014542937735214,
+      "pnlPct": -18.88387824126264,
+      "reason": "SL",
+      "openTime": 1778757099106,
+      "closeTime": 1779363806220
+    },
     {
       "id": 1779235997319,
       "symbol": "DOGEUSDT",
@@ -3886,12 +3912,24 @@
     {
       "time": 1779351686436,
       "value": 840.5092212991683
+    },
+    {
+      "time": 1779363806220,
+      "value": 177.26453083049506
+    },
+    {
+      "time": 1779363806220,
+      "value": 235.184405378157
+    },
+    {
+      "time": 1779363843225,
+      "value": 841.4412949064478
     }
   ],
   "dailyStart": 135.54375381805022,
   "dailyStartTime": 1779321600000,
-  "totalTrades": 153,
-  "wins": 52,
+  "totalTrades": 155,
+  "wins": 53,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -3922,5 +3960,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-21T08:21:26.436Z"
+  "lastRun": "2026-05-21T11:44:03.226Z"
 }
