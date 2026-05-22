@@ -1,5 +1,5 @@
 {
-  "balance": 139.65113018865992,
+  "balance": 121.6733842838376,
   "initialBalance": 1000,
   "positions": [
     {
@@ -111,19 +111,32 @@
       "openTime": 1779391077397
     },
     {
+      "id": 1779413707616,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2.042,
+      "margin": 40.557794761279204,
+      "leverage": 10,
+      "size": 405.57794761279206,
+      "stopLossPrice": 2.0726299999999998,
+      "takeProfitPrice": 1.9807399999999997,
+      "openTime": 1779413707616
+    }
+  ],
+  "history": [
+    {
       "id": 1779397764143,
       "symbol": "NEARUSDT",
       "direction": "SHORT",
       "entryPrice": 1.942,
-      "margin": 46.55037672955331,
+      "closePrice": 2.042,
       "leverage": 10,
-      "size": 465.50376729553307,
-      "stopLossPrice": 1.9711299999999998,
-      "takeProfitPrice": 1.88374,
-      "openTime": 1779397764143
-    }
-  ],
-  "history": [
+      "pnl": -23.97032787309642,
+      "pnlPct": -51.4933058702368,
+      "reason": "SL",
+      "openTime": 1779397764143,
+      "closeTime": 1779413692822
+    },
     {
       "id": 1779298092240,
       "symbol": "OPUSDT",
@@ -3999,11 +4012,19 @@
     {
       "time": 1779406810793,
       "value": 849.7152729096445
+    },
+    {
+      "time": 1779413692822,
+      "value": 162.23117904511682
+    },
+    {
+      "time": 1779413731424,
+      "value": 814.1480299816761
     }
   ],
-  "dailyStart": 135.54375381805022,
-  "dailyStartTime": 1779321600000,
-  "totalTrades": 158,
+  "dailyStart": 139.65113018865992,
+  "dailyStartTime": 1779408000000,
+  "totalTrades": 159,
   "wins": 54,
   "config": {
     "leverage": 10,
@@ -4035,5 +4056,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-21T23:40:10.793Z"
+  "lastRun": "2026-05-22T01:35:31.425Z"
 }
