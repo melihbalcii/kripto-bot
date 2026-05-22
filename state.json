@@ -1,5 +1,5 @@
 {
-  "balance": 121.6733842838376,
+  "balance": 82.5172090246122,
   "initialBalance": 1000,
   "positions": [
     {
@@ -51,30 +51,6 @@
       "openTime": 1779298083361
     },
     {
-      "id": 1779298094439,
-      "symbol": "POLUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.09106,
-      "margin": 45.18125127268341,
-      "leverage": 10,
-      "size": 451.81251272683414,
-      "stopLossPrice": 0.09242589999999999,
-      "takeProfitPrice": 0.0883282,
-      "openTime": 1779298094439
-    },
-    {
-      "id": 1779338580660,
-      "symbol": "DOTUSDT",
-      "direction": "SHORT",
-      "entryPrice": 1.278,
-      "margin": 43.79473256558701,
-      "leverage": 10,
-      "size": 437.94732565587015,
-      "stopLossPrice": 1.29717,
-      "takeProfitPrice": 1.23966,
-      "openTime": 1779338580660
-    },
-    {
       "id": 1779363811514,
       "symbol": "SOLUSDT",
       "direction": "LONG",
@@ -111,19 +87,82 @@
       "openTime": 1779391077397
     },
     {
+      "id": 1779428976495,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2.199,
+      "margin": 48.89908682939983,
+      "leverage": 10,
+      "size": 488.9908682939983,
+      "stopLossPrice": 2.2319849999999994,
+      "takeProfitPrice": 2.1330299999999998,
+      "openTime": 1779428976495
+    },
+    {
+      "id": 1779428980909,
+      "symbol": "OPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1343,
+      "margin": 36.67431512204987,
+      "leverage": 10,
+      "size": 366.7431512204987,
+      "stopLossPrice": 0.13631449999999998,
+      "takeProfitPrice": 0.130271,
+      "openTime": 1779428980909
+    },
+    {
+      "id": 1779428985343,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2527,
+      "margin": 27.5057363415374,
+      "leverage": 10,
+      "size": 275.05736341537397,
+      "stopLossPrice": 0.25649049999999995,
+      "takeProfitPrice": 0.24511899999999998,
+      "openTime": 1779428985343
+    }
+  ],
+  "history": [
+    {
       "id": 1779413707616,
       "symbol": "NEARUSDT",
       "direction": "SHORT",
       "entryPrice": 2.042,
-      "margin": 40.557794761279204,
+      "closePrice": 2.199,
       "leverage": 10,
-      "size": 405.57794761279206,
-      "stopLossPrice": 2.0726299999999998,
-      "takeProfitPrice": 1.9807399999999997,
-      "openTime": 1779413707616
-    }
-  ],
-  "history": [
+      "pnl": -31.183025355146114,
+      "pnlPct": -76.88540646425075,
+      "reason": "SL",
+      "openTime": 1779413707616,
+      "closeTime": 1779428962824
+    },
+    {
+      "id": 1779338580660,
+      "symbol": "DOTUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1.278,
+      "closePrice": 1.328,
+      "leverage": 10,
+      "pnl": -17.134089423156126,
+      "pnlPct": -39.12363067292649,
+      "reason": "SL",
+      "openTime": 1779338580660,
+      "closeTime": 1779428962824
+    },
+    {
+      "id": 1779298094439,
+      "symbol": "POLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.09106,
+      "closePrice": 0.09253,
+      "leverage": 10,
+      "pnl": -7.293700787485677,
+      "pnlPct": -16.143202284208204,
+      "reason": "SL",
+      "openTime": 1779298094439,
+      "closeTime": 1779428962824
+    },
     {
       "id": 1779397764143,
       "symbol": "NEARUSDT",
@@ -4020,11 +4059,27 @@
     {
       "time": 1779413731424,
       "value": 814.1480299816761
+    },
+    {
+      "time": 1779428962824,
+      "value": 159.56093476903533
+    },
+    {
+      "time": 1779428962824,
+      "value": 186.22157791146623
+    },
+    {
+      "time": 1779428962824,
+      "value": 195.5963473175993
+    },
+    {
+      "time": 1779428998339,
+      "value": 774.2024384631314
     }
   ],
   "dailyStart": 139.65113018865992,
   "dailyStartTime": 1779408000000,
-  "totalTrades": 159,
+  "totalTrades": 162,
   "wins": 54,
   "config": {
     "leverage": 10,
@@ -4056,5 +4111,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-22T01:35:31.425Z"
+  "lastRun": "2026-05-22T05:49:58.340Z"
 }
