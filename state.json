@@ -1,5 +1,5 @@
 {
-  "balance": 202.3342240459482,
+  "balance": 151.75066803446114,
   "initialBalance": 1000,
   "positions": [
     {
@@ -109,6 +109,18 @@
       "stopLossPrice": 2.59843,
       "takeProfitPrice": 2.71714,
       "openTime": 1779820593439
+    },
+    {
+      "id": 1779833500042,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3754,
+      "margin": 50.58355601148705,
+      "leverage": 10,
+      "size": 505.8355601148705,
+      "stopLossPrice": 0.38103099999999995,
+      "takeProfitPrice": 0.364138,
+      "openTime": 1779833500042
     }
   ],
   "history": [
@@ -4717,6 +4729,10 @@
     {
       "time": 1779827757645,
       "value": 786.9158967839496
+    },
+    {
+      "time": 1779833521349,
+      "value": 777.072931412406
     }
   ],
   "dailyStart": 90.2860461543177,
@@ -4753,5 +4769,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-26T20:35:57.645Z"
+  "lastRun": "2026-05-26T22:12:01.349Z"
 }
