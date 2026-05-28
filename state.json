@@ -1,31 +1,7 @@
 {
-  "balance": 55.25043298055457,
+  "balance": 84.25978516881142,
   "initialBalance": 1000,
   "positions": [
-    {
-      "id": 1779833500042,
-      "symbol": "TRXUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.3754,
-      "margin": 50.58355601148705,
-      "leverage": 10,
-      "size": 505.8355601148705,
-      "stopLossPrice": 0.38103099999999995,
-      "takeProfitPrice": 0.364138,
-      "openTime": 1779833500042
-    },
-    {
-      "id": 1779918559392,
-      "symbol": "ATOMUSDT",
-      "direction": "LONG",
-      "entryPrice": 2.119,
-      "margin": 31.50966426548003,
-      "leverage": 10,
-      "size": 315.0966426548003,
-      "stopLossPrice": 2.087215,
-      "takeProfitPrice": 2.18257,
-      "openTime": 1779918559392
-    },
     {
       "id": 1779943344361,
       "symbol": "BTCUSDT",
@@ -121,9 +97,59 @@
       "stopLossPrice": 0.08619735,
       "takeProfitPrice": 0.0901353,
       "openTime": 1779943366400
+    },
+    {
+      "id": 1779957174390,
+      "symbol": "TRXUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.3602,
+      "margin": 37.44879340836063,
+      "leverage": 10,
+      "size": 374.4879340836063,
+      "stopLossPrice": 0.35479700000000003,
+      "takeProfitPrice": 0.37100600000000006,
+      "openTime": 1779957174390
+    },
+    {
+      "id": 1779957181386,
+      "symbol": "ADAUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.2297,
+      "margin": 28.086595056270472,
+      "leverage": 10,
+      "size": 280.8659505627047,
+      "stopLossPrice": 0.23314549999999998,
+      "takeProfitPrice": 0.22280899999999998,
+      "openTime": 1779957181386
     }
   ],
   "history": [
+    {
+      "id": 1779918559392,
+      "symbol": "ATOMUSDT",
+      "direction": "LONG",
+      "entryPrice": 2.119,
+      "closePrice": 2.065,
+      "leverage": 10,
+      "pnl": -8.029834215837328,
+      "pnlPct": -25.483718735252598,
+      "reason": "SL",
+      "openTime": 1779918559392,
+      "closeTime": 1779957158415
+    },
+    {
+      "id": 1779833500042,
+      "symbol": "TRXUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.3754,
+      "closePrice": 0.3602,
+      "leverage": 10,
+      "pnl": 20.481354591758194,
+      "pnlPct": 40.49014384656363,
+      "reason": "TP",
+      "openTime": 1779833500042,
+      "closeTime": 1779957158415
+    },
     {
       "id": 1779918557027,
       "symbol": "LTCUSDT",
@@ -2697,47 +2723,9 @@
       "reason": "SL",
       "openTime": 1777643627016,
       "closeTime": 1778011433460
-    },
-    {
-      "id": 1777889408109,
-      "symbol": "DOGEUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1095,
-      "closePrice": 0.1135,
-      "leverage": 10,
-      "pnl": 25.615245416127344,
-      "pnlPct": 36.52968036529684,
-      "reason": "TP",
-      "openTime": 1777889408109,
-      "closeTime": 1778006755271
-    },
-    {
-      "id": 1777870597363,
-      "symbol": "BTCUSDT",
-      "direction": "SHORT",
-      "entryPrice": 80260.94,
-      "closePrice": 81499.22,
-      "leverage": 10,
-      "pnl": -25.85643977530274,
-      "pnlPct": -15.428177143203142,
-      "reason": "SL",
-      "openTime": 1777870597363,
-      "closeTime": 1778006755271
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1777889395528,
-      "value": 280.48693730659414
-    },
-    {
-      "time": 1777889436485,
-      "value": 1023.4292046633141
-    },
-    {
-      "time": 1777896307674,
-      "value": 1020.8497065373787
-    },
     {
       "time": 1777905022090,
       "value": 1006.6325614863024
@@ -4729,12 +4717,24 @@
     {
       "time": 1779943381836,
       "value": 642.3281757312661
+    },
+    {
+      "time": 1779957158415,
+      "value": 126.3153435837998
+    },
+    {
+      "time": 1779957158415,
+      "value": 149.79517363344252
+    },
+    {
+      "time": 1779957194599,
+      "value": 645.9556433631133
     }
   ],
   "dailyStart": 94.5289927964401,
   "dailyStartTime": 1779926400000,
-  "totalTrades": 224,
-  "wins": 78,
+  "totalTrades": 226,
+  "wins": 79,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -4765,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-28T04:43:01.836Z"
+  "lastRun": "2026-05-28T08:33:14.599Z"
 }
