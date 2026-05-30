@@ -1,5 +1,5 @@
 {
-  "balance": 106.84163147254978,
+  "balance": 99.59368981811413,
   "initialBalance": 1000,
   "positions": [
     {
@@ -111,19 +111,32 @@
       "openTime": 1780108717089
     },
     {
+      "id": 1780152681137,
+      "symbol": "BNBUSDT",
+      "direction": "SHORT",
+      "entryPrice": 684.75,
+      "margin": 33.19789660603804,
+      "leverage": 10,
+      "size": 331.97896606038046,
+      "stopLossPrice": 695.0212499999999,
+      "takeProfitPrice": 664.2075,
+      "openTime": 1780152681137
+    }
+  ],
+  "history": [
+    {
       "id": 1780120990744,
       "symbol": "BNBUSDT",
       "direction": "SHORT",
       "entryPrice": 666.66,
-      "margin": 35.61387715751659,
+      "closePrice": 684.75,
       "leverage": 10,
-      "size": 356.1387715751659,
-      "stopLossPrice": 676.6598999999999,
-      "takeProfitPrice": 646.6601999999999,
-      "openTime": 1780120990744
-    }
-  ],
-  "history": [
+      "pnl": -9.663922205914202,
+      "pnlPct": -27.135271352713573,
+      "reason": "SL",
+      "openTime": 1780120990744,
+      "closeTime": 1780152673372
+    },
     {
       "id": 1779943351131,
       "symbol": "BNBUSDT",
@@ -2710,46 +2723,9 @@
       "reason": "SL",
       "openTime": 1778058665906,
       "closeTime": 1778087589099
-    },
-    {
-      "id": 1778066379137,
-      "symbol": "NEARUSDT",
-      "direction": "SHORT",
-      "entryPrice": 1.453,
-      "closePrice": 1.486,
-      "leverage": 10,
-      "pnl": -7.894867256670138,
-      "pnlPct": -22.711631108052245,
-      "reason": "SL",
-      "openTime": 1778066379137,
-      "closeTime": 1778073067792
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778025877041,
-      "value": 978.4393369459397
-    },
-    {
-      "time": 1778040187956,
-      "value": 231.75453322001312
-    },
-    {
-      "time": 1778040226023,
-      "value": 932.9914156592596
-    },
-    {
-      "time": 1778049889200,
-      "value": 937.166519211499
-    },
-    {
-      "time": 1778058647367,
-      "value": 202.92160298883812
-    },
-    {
-      "time": 1778058647367,
-      "value": 280.37709888502525
-    },
     {
       "time": 1778058647367,
       "value": 338.08874257058267
@@ -4745,11 +4721,19 @@
     {
       "time": 1780147087628,
       "value": 736.5328627470108
+    },
+    {
+      "time": 1780152673372,
+      "value": 132.79158642415217
+    },
+    {
+      "time": 1780152710110,
+      "value": 736.8717905428613
     }
   ],
   "dailyStart": 85.88289869091462,
   "dailyStartTime": 1780099200000,
-  "totalTrades": 237,
+  "totalTrades": 238,
   "wins": 84,
   "config": {
     "leverage": 10,
@@ -4781,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-30T13:18:07.628Z"
+  "lastRun": "2026-05-30T14:51:50.110Z"
 }
