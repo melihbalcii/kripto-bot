@@ -1,5 +1,5 @@
 {
-  "balance": 83.79894570636793,
+  "balance": 92.6183757328314,
   "initialBalance": 1000,
   "positions": [
     {
@@ -75,18 +75,6 @@
       "openTime": 1780108705876
     },
     {
-      "id": 1780108712654,
-      "symbol": "OPUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1221,
-      "margin": 34.034999799385446,
-      "leverage": 10,
-      "size": 340.34999799385446,
-      "stopLossPrice": 0.12393149999999999,
-      "takeProfitPrice": 0.118437,
-      "openTime": 1780108712654
-    },
-    {
       "id": 1780108714886,
       "symbol": "POLUSDT",
       "direction": "SHORT",
@@ -111,19 +99,57 @@
       "openTime": 1780108717089
     },
     {
+      "id": 1780223061818,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 722.42,
+      "margin": 41.16372254792506,
+      "leverage": 10,
+      "size": 411.6372254792506,
+      "stopLossPrice": 711.5836999999999,
+      "takeProfitPrice": 744.0926,
+      "openTime": 1780223061818
+    },
+    {
+      "id": 1780223068524,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 2.242,
+      "margin": 30.872791910943796,
+      "leverage": 10,
+      "size": 308.72791910943795,
+      "stopLossPrice": 2.20837,
+      "takeProfitPrice": 2.30926,
+      "openTime": 1780223068524
+    }
+  ],
+  "history": [
+    {
       "id": 1780202986353,
       "symbol": "NEARUSDT",
       "direction": "SHORT",
       "entryPrice": 2.313,
-      "margin": 27.932981902122645,
+      "closePrice": 2.242,
       "leverage": 10,
-      "size": 279.32981902122646,
-      "stopLossPrice": 2.347695,
-      "takeProfitPrice": 2.24361,
-      "openTime": 1780202986353
-    }
-  ],
-  "history": [
+      "pnl": 8.574326480980167,
+      "pnlPct": 30.696065715521044,
+      "reason": "TP",
+      "openTime": 1780202986353,
+      "closeTime": 1780223054771
+    },
+    {
+      "id": 1780108712654,
+      "symbol": "OPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1221,
+      "closePrice": 0.1184,
+      "leverage": 10,
+      "pnl": 10.31363630284406,
+      "pnlPct": 30.30303030303026,
+      "reason": "TP",
+      "openTime": 1780108712654,
+      "closeTime": 1780223054771
+    },
     {
       "id": 1780170766056,
       "symbol": "BNBUSDT",
@@ -2697,51 +2723,9 @@
       "reason": "TP",
       "openTime": 1778040200293,
       "closeTime": 1778116982179
-    },
-    {
-      "id": 1778103904400,
-      "symbol": "OPUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1473,
-      "closePrice": 0.1426,
-      "leverage": 10,
-      "pnl": 12.507884589393115,
-      "pnlPct": 31.90767141887293,
-      "reason": "TP",
-      "openTime": 1778103904400,
-      "closeTime": 1778106816757
-    },
-    {
-      "id": 1778087613486,
-      "symbol": "OPUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1383,
-      "closePrice": 0.1473,
-      "leverage": 10,
-      "pnl": -22.86576702457393,
-      "pnlPct": -65.07592190889356,
-      "reason": "SL",
-      "openTime": 1778087613486,
-      "closeTime": 1778103884612
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778087589100,
-      "value": 187.39766397028632
-    },
-    {
-      "time": 1778087631609,
-      "value": 833.025215546903
-    },
-    {
-      "time": 1778094052520,
-      "value": 867.7600442432137
-    },
-    {
-      "time": 1778100107212,
-      "value": 853.5224782182985
-    },
     {
       "time": 1778103884612,
       "value": 144.52967524441016
@@ -4733,12 +4717,24 @@
     {
       "time": 1780215130162,
       "value": 729.2536591388475
+    },
+    {
+      "time": 1780223054771,
+      "value": 128.14758180859744
+    },
+    {
+      "time": 1780223054771,
+      "value": 164.65489019170025
+    },
+    {
+      "time": 1780223090623,
+      "value": 734.8670309270767
     }
   ],
   "dailyStart": 87.13315333769503,
   "dailyStartTime": 1780185600000,
-  "totalTrades": 241,
-  "wins": 84,
+  "totalTrades": 243,
+  "wins": 86,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -4769,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-31T08:12:10.162Z"
+  "lastRun": "2026-05-31T10:24:50.624Z"
 }
