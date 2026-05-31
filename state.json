@@ -1,5 +1,5 @@
 {
-  "balance": 92.6183757328314,
+  "balance": 101.50015574289326,
   "initialBalance": 1000,
   "positions": [
     {
@@ -111,19 +111,32 @@
       "openTime": 1780223061818
     },
     {
+      "id": 1780233996008,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2.328,
+      "margin": 33.833385247631085,
+      "leverage": 10,
+      "size": 338.3338524763109,
+      "stopLossPrice": 2.3629199999999995,
+      "takeProfitPrice": 2.2581599999999997,
+      "openTime": 1780233996008
+    }
+  ],
+  "history": [
+    {
       "id": 1780223068524,
       "symbol": "NEARUSDT",
       "direction": "LONG",
       "entryPrice": 2.242,
-      "margin": 30.872791910943796,
+      "closePrice": 2.328,
       "leverage": 10,
-      "size": 308.72791910943795,
-      "stopLossPrice": 2.20837,
-      "takeProfitPrice": 2.30926,
-      "openTime": 1780223068524
-    }
-  ],
-  "history": [
+      "pnl": 11.842373346749161,
+      "pnlPct": 38.35860838537014,
+      "reason": "TP",
+      "openTime": 1780223068524,
+      "closeTime": 1780233982356
+    },
     {
       "id": 1780202986353,
       "symbol": "NEARUSDT",
@@ -2710,34 +2723,9 @@
       "reason": "SL",
       "openTime": 1778058652596,
       "closeTime": 1778139606219
-    },
-    {
-      "id": 1778040200293,
-      "symbol": "DOGEUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1157,
-      "closePrice": 0.1111,
-      "leverage": 10,
-      "pnl": 23.035238824806804,
-      "pnlPct": 39.75799481417454,
-      "reason": "TP",
-      "openTime": 1778040200293,
-      "closeTime": 1778116982179
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778103884612,
-      "value": 144.52967524441016
-    },
-    {
-      "time": 1778103884612,
-      "value": 156.8009702142649
-    },
-    {
-      "time": 1778103921867,
-      "value": 806.827263231067
-    },
     {
       "time": 1778106816757,
       "value": 139.90867288848335
@@ -4733,12 +4721,20 @@
     {
       "time": 1780228553789,
       "value": 739.3466125299266
+    },
+    {
+      "time": 1780233982356,
+      "value": 135.33354099052434
+    },
+    {
+      "time": 1780234021504,
+      "value": 752.2745623275827
     }
   ],
   "dailyStart": 87.13315333769503,
   "dailyStartTime": 1780185600000,
-  "totalTrades": 243,
-  "wins": 86,
+  "totalTrades": 244,
+  "wins": 87,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -4769,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-05-31T11:55:53.790Z"
+  "lastRun": "2026-05-31T13:27:01.505Z"
 }
