@@ -1,5 +1,5 @@
 {
-  "balance": 64.56710969355406,
+  "balance": 73.02762720735893,
   "initialBalance": 1000,
   "positions": [
     {
@@ -51,18 +51,6 @@
       "openTime": 1780442549968
     },
     {
-      "id": 1780442552213,
-      "symbol": "BNBUSDT",
-      "direction": "LONG",
-      "entryPrice": 649.51,
-      "margin": 68.46926817497622,
-      "leverage": 10,
-      "size": 684.6926817497622,
-      "stopLossPrice": 639.76735,
-      "takeProfitPrice": 668.9953,
-      "openTime": 1780442552213
-    },
-    {
       "id": 1780442570306,
       "symbol": "AVAXUSDT",
       "direction": "LONG",
@@ -111,19 +99,57 @@
       "openTime": 1780470454481
     },
     {
+      "id": 1780488563803,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 636.01,
+      "margin": 32.456723203270634,
+      "leverage": 10,
+      "size": 324.56723203270633,
+      "stopLossPrice": 626.46985,
+      "takeProfitPrice": 655.0903,
+      "openTime": 1780488563803
+    },
+    {
+      "id": 1780488578925,
+      "symbol": "POLUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.09317,
+      "margin": 24.342542402452978,
+      "leverage": 10,
+      "size": 243.42542402452978,
+      "stopLossPrice": 0.09177245,
+      "takeProfitPrice": 0.09596510000000001,
+      "openTime": 1780488578925
+    }
+  ],
+  "history": [
+    {
       "id": 1780470456660,
       "symbol": "NEARUSDT",
       "direction": "SHORT",
       "entryPrice": 2.808,
-      "margin": 21.522369897851352,
+      "closePrice": 2.945,
       "leverage": 10,
-      "size": 215.2236989785135,
-      "stopLossPrice": 2.8501199999999995,
-      "takeProfitPrice": 2.72376,
-      "openTime": 1780470456660
-    }
-  ],
-  "history": [
+      "pnl": -10.500586453011522,
+      "pnlPct": -48.78917378917379,
+      "reason": "SL",
+      "openTime": 1780470456660,
+      "closeTime": 1780488556668
+    },
+    {
+      "id": 1780442552213,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 649.51,
+      "closePrice": 636.01,
+      "leverage": 10,
+      "pnl": -14.231268500287586,
+      "pnlPct": -20.78489938569075,
+      "reason": "SL",
+      "openTime": 1780442552213,
+      "closeTime": 1780488556668
+    },
     {
       "id": 1780442576873,
       "symbol": "LTCUSDT",
@@ -2697,47 +2723,9 @@
       "reason": "TP",
       "openTime": 1778431680710,
       "closeTime": 1778601532899
-    },
-    {
-      "id": 1778476397267,
-      "symbol": "DOTUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.351,
-      "closePrice": 1.329,
-      "leverage": 10,
-      "pnl": -7.794548119346959,
-      "pnlPct": -16.28423390081423,
-      "reason": "SL",
-      "openTime": 1778476397267,
-      "closeTime": 1778585621935
-    },
-    {
-      "id": 1778476392730,
-      "symbol": "AVAXUSDT",
-      "direction": "LONG",
-      "entryPrice": 10.03,
-      "closePrice": 9.849,
-      "leverage": 10,
-      "pnl": -11.517016503048554,
-      "pnlPct": -18.045862412761632,
-      "reason": "SL",
-      "openTime": 1778476392730,
-      "closeTime": 1778585621935
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778347810701,
-      "value": 903.2775602655973
-    },
-    {
-      "time": 1778351588198,
-      "value": 904.4420451076804
-    },
-    {
-      "time": 1778355901834,
-      "value": 898.8455210272042
-    },
     {
       "time": 1778358519976,
       "value": 899.9109993801263
@@ -4729,11 +4717,23 @@
     {
       "time": 1780470478556,
       "value": 613.3253087887701
+    },
+    {
+      "time": 1780488556668,
+      "value": 118.8051093682427
+    },
+    {
+      "time": 1780488556668,
+      "value": 129.82689281308254
+    },
+    {
+      "time": 1780488595314,
+      "value": 601.4847140379918
     }
   ],
   "dailyStart": 86.65641753395428,
   "dailyStartTime": 1780444800000,
-  "totalTrades": 284,
+  "totalTrades": 286,
   "wins": 101,
   "config": {
     "leverage": 10,
@@ -4765,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-03T07:07:58.557Z"
+  "lastRun": "2026-06-03T12:09:55.314Z"
 }
