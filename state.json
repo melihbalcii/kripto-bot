@@ -1,129 +1,259 @@
 {
-  "balance": 36.41177088403261,
+  "balance": 28.902267708390724,
   "initialBalance": 1000,
   "positions": [
     {
-      "id": 1780564174884,
-      "symbol": "TRXUSDT",
+      "id": 1780675927214,
+      "symbol": "BTCUSDT",
       "direction": "LONG",
-      "entryPrice": 0.3302,
-      "margin": 23.512647335342248,
+      "entryPrice": 59885.33,
+      "margin": 128.30964226571797,
       "leverage": 10,
-      "size": 235.12647335342248,
-      "stopLossPrice": 0.325247,
-      "takeProfitPrice": 0.340106,
-      "openTime": 1780564174884
+      "size": 1283.0964226571796,
+      "stopLossPrice": 58987.05005,
+      "takeProfitPrice": 61681.8899,
+      "openTime": 1780675927214
     },
     {
-      "id": 1780639635377,
+      "id": 1780675929421,
       "symbol": "ETHUSDT",
       "direction": "LONG",
-      "entryPrice": 1687.78,
-      "margin": 132.3401939715569,
+      "entryPrice": 1551.21,
+      "margin": 96.23223169928848,
       "leverage": 10,
-      "size": 1323.401939715569,
-      "stopLossPrice": 1662.4633,
-      "takeProfitPrice": 1738.4134,
-      "openTime": 1780639635377
+      "size": 962.3223169928848,
+      "stopLossPrice": 1527.94185,
+      "takeProfitPrice": 1597.7463,
+      "openTime": 1780675929422
     },
     {
-      "id": 1780639640455,
+      "id": 1780675931701,
+      "symbol": "SOLUSDT",
+      "direction": "LONG",
+      "entryPrice": 63.31,
+      "margin": 72.17417377446635,
+      "leverage": 10,
+      "size": 721.7417377446635,
+      "stopLossPrice": 62.360350000000004,
+      "takeProfitPrice": 65.2093,
+      "openTime": 1780675931701
+    },
+    {
+      "id": 1780675933994,
       "symbol": "BNBUSDT",
       "direction": "LONG",
-      "entryPrice": 585,
-      "margin": 99.25514547866766,
+      "entryPrice": 569.95,
+      "margin": 54.13063033084977,
       "leverage": 10,
-      "size": 992.5514547866766,
-      "stopLossPrice": 576.225,
-      "takeProfitPrice": 602.5500000000001,
-      "openTime": 1780639640455
+      "size": 541.3063033084977,
+      "stopLossPrice": 561.40075,
+      "takeProfitPrice": 587.0485000000001,
+      "openTime": 1780675933994
     },
     {
-      "id": 1780654513847,
-      "symbol": "SOLUSDT",
-      "direction": "SHORT",
-      "entryPrice": 66.56,
-      "margin": 68.1950679199806,
+      "id": 1780675937217,
+      "symbol": "XRPUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.087,
+      "margin": 40.59797274813732,
       "leverage": 10,
-      "size": 681.950679199806,
-      "stopLossPrice": 67.55839999999999,
-      "takeProfitPrice": 64.5632,
-      "openTime": 1780654513847
+      "size": 405.97972748137323,
+      "stopLossPrice": 1.070695,
+      "takeProfitPrice": 1.11961,
+      "openTime": 1780675937217
     },
     {
-      "id": 1780654521674,
+      "id": 1780675939516,
       "symbol": "DOGEUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.08484,
-      "margin": 51.14630093998545,
+      "direction": "LONG",
+      "entryPrice": 0.08057,
+      "margin": 30.448479561102992,
       "leverage": 10,
-      "size": 511.4630093998545,
-      "stopLossPrice": 0.08611259999999998,
-      "takeProfitPrice": 0.0822948,
-      "openTime": 1780654521674
+      "size": 304.48479561102994,
+      "stopLossPrice": 0.07936145,
+      "takeProfitPrice": 0.08298710000000001,
+      "openTime": 1780675939516
     },
     {
-      "id": 1780654528773,
+      "id": 1780675941746,
+      "symbol": "NEARUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.902,
+      "margin": 22.836359670827242,
+      "leverage": 10,
+      "size": 228.36359670827244,
+      "stopLossPrice": 1.87347,
+      "takeProfitPrice": 1.95906,
+      "openTime": 1780675941746
+    },
+    {
+      "id": 1780675943973,
+      "symbol": "TRXUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.3195,
+      "margin": 17.12726975312043,
+      "leverage": 10,
+      "size": 171.2726975312043,
+      "stopLossPrice": 0.31470750000000003,
+      "takeProfitPrice": 0.329085,
+      "openTime": 1780675943973
+    },
+    {
+      "id": 1780675946344,
       "symbol": "OPUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.1057,
-      "margin": 38.35972570498909,
+      "direction": "LONG",
+      "entryPrice": 0.09614,
+      "margin": 12.845452314840323,
       "leverage": 10,
-      "size": 383.5972570498909,
-      "stopLossPrice": 0.10728549999999999,
-      "takeProfitPrice": 0.102529,
-      "openTime": 1780654528773
+      "size": 128.4545231484032,
+      "stopLossPrice": 0.0946979,
+      "takeProfitPrice": 0.0990242,
+      "openTime": 1780675946344
     },
     {
-      "id": 1780654538664,
-      "symbol": "LINKUSDT",
-      "direction": "SHORT",
-      "entryPrice": 7.614,
-      "margin": 28.769794278741816,
+      "id": 1780675948923,
+      "symbol": "POLUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.07514,
+      "margin": 9.634089236130242,
       "leverage": 10,
-      "size": 287.6979427874182,
-      "stopLossPrice": 7.728209999999999,
-      "takeProfitPrice": 7.38558,
-      "openTime": 1780654538664
-    },
+      "size": 96.34089236130242,
+      "stopLossPrice": 0.07401289999999999,
+      "takeProfitPrice": 0.0773942,
+      "openTime": 1780675948923
+    }
+  ],
+  "history": [
     {
-      "id": 1780654540833,
-      "symbol": "DOTUSDT",
-      "direction": "SHORT",
-      "entryPrice": 0.9997,
-      "margin": 21.577345709056363,
+      "id": 1780666049876,
+      "symbol": "ATOMUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.713,
+      "closePrice": 1.648,
       "leverage": 10,
-      "size": 215.77345709056362,
-      "stopLossPrice": 1.0146955,
-      "takeProfitPrice": 0.969709,
-      "openTime": 1780654540833
+      "pnl": -4.605497387550352,
+      "pnlPct": -37.94512551079986,
+      "reason": "SL",
+      "openTime": 1780666049876,
+      "closeTime": 1780675927008
     },
     {
       "id": 1780654543096,
       "symbol": "LTCUSDT",
       "direction": "SHORT",
       "entryPrice": 44.47,
-      "margin": 16.183009281792273,
+      "closePrice": 42.75,
       "leverage": 10,
-      "size": 161.83009281792272,
-      "stopLossPrice": 45.137049999999995,
-      "takeProfitPrice": 43.1359,
-      "openTime": 1780654543096
+      "pnl": 6.259225537369618,
+      "pnlPct": 38.67776028783447,
+      "reason": "TP",
+      "openTime": 1780654543096,
+      "closeTime": 1780675927008
     },
     {
-      "id": 1780666049876,
-      "symbol": "ATOMUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.713,
-      "margin": 12.137256961344205,
+      "id": 1780654540833,
+      "symbol": "DOTUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.9997,
+      "closePrice": 0.9347,
       "leverage": 10,
-      "size": 121.37256961344205,
-      "stopLossPrice": 1.687305,
-      "takeProfitPrice": 1.7643900000000001,
-      "openTime": 1780666049876
-    }
-  ],
-  "history": [
+      "pnl": 14.029483555953435,
+      "pnlPct": 65.01950585175558,
+      "reason": "TP",
+      "openTime": 1780654540833,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780654538664,
+      "symbol": "LINKUSDT",
+      "direction": "SHORT",
+      "entryPrice": 7.614,
+      "closePrice": 7.186,
+      "leverage": 10,
+      "pnl": 16.172145982796817,
+      "pnlPct": 56.21224060940373,
+      "reason": "TP",
+      "openTime": 1780654538664,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780654528773,
+      "symbol": "OPUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.1057,
+      "closePrice": 0.09614,
+      "leverage": 10,
+      "pnl": 34.694321451248406,
+      "pnlPct": 90.44465468306527,
+      "reason": "TP",
+      "openTime": 1780654528773,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780654521674,
+      "symbol": "DOGEUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.08484,
+      "closePrice": 0.08057,
+      "leverage": 10,
+      "pnl": 25.741950143061963,
+      "pnlPct": 50.33003300330029,
+      "reason": "TP",
+      "openTime": 1780654521674,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780654513847,
+      "symbol": "SOLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 66.56,
+      "closePrice": 63.31,
+      "leverage": 10,
+      "pnl": 33.29837300780303,
+      "pnlPct": 48.828125,
+      "reason": "TP",
+      "openTime": 1780654513847,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780639640455,
+      "symbol": "BNBUSDT",
+      "direction": "LONG",
+      "entryPrice": 585,
+      "closePrice": 569.95,
+      "leverage": 10,
+      "pnl": -25.534870759896474,
+      "pnlPct": -25.726495726495653,
+      "reason": "SL",
+      "openTime": 1780639640455,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780639635377,
+      "symbol": "ETHUSDT",
+      "direction": "LONG",
+      "entryPrice": 1687.78,
+      "closePrice": 1551.21,
+      "leverage": 10,
+      "pnl": -107.08564084593677,
+      "pnlPct": -80.9169441514889,
+      "reason": "SL",
+      "openTime": 1780639635377,
+      "closeTime": 1780675927008
+    },
+    {
+      "id": 1780564174884,
+      "symbol": "TRXUSDT",
+      "direction": "LONG",
+      "entryPrice": 0.3302,
+      "closePrice": 0.3195,
+      "leverage": 10,
+      "pnl": -7.6191800874670434,
+      "pnlPct": -32.40460327074497,
+      "reason": "SL",
+      "openTime": 1780564174884,
+      "closeTime": 1780675927007
+    },
     {
       "id": 1780639654128,
       "symbol": "POLUSDT",
@@ -2593,187 +2723,9 @@
       "reason": "TP",
       "openTime": 1778918238535,
       "closeTime": 1779009811697
-    },
-    {
-      "id": 1778924486505,
-      "symbol": "POLUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.08886,
-      "closePrice": 0.09222,
-      "leverage": 10,
-      "pnl": 14.670575926564846,
-      "pnlPct": 37.81228899392304,
-      "reason": "TP",
-      "openTime": 1778924486505,
-      "closeTime": 1778994396785
-    },
-    {
-      "id": 1778918229572,
-      "symbol": "SOLUSDT",
-      "direction": "LONG",
-      "entryPrice": 87.39,
-      "closePrice": 85.91,
-      "leverage": 10,
-      "pnl": -16.047458194612776,
-      "pnlPct": -16.93557615287795,
-      "reason": "SL",
-      "openTime": 1778918229572,
-      "closeTime": 1778928528995
-    },
-    {
-      "id": 1778855682498,
-      "symbol": "POLUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.09024,
-      "closePrice": 0.08886,
-      "leverage": 10,
-      "pnl": -4.963498147712689,
-      "pnlPct": -15.292553191489432,
-      "reason": "SL",
-      "openTime": 1778855682498,
-      "closeTime": 1778924466036
-    },
-    {
-      "id": 1778635771553,
-      "symbol": "BNBUSDT",
-      "direction": "SHORT",
-      "entryPrice": 677,
-      "closePrice": 654.31,
-      "leverage": 10,
-      "pnl": 22.463435500891304,
-      "pnlPct": 33.51550960118176,
-      "reason": "TP",
-      "openTime": 1778635771553,
-      "closeTime": 1778924466036
-    },
-    {
-      "id": 1778910601082,
-      "symbol": "NEARUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.526,
-      "closePrice": 1.496,
-      "leverage": 10,
-      "pnl": -9.1213863873327,
-      "pnlPct": -19.6592398427261,
-      "reason": "SL",
-      "openTime": 1778910601082,
-      "closeTime": 1778918224961
-    },
-    {
-      "id": 1778855679593,
-      "symbol": "OPUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1357,
-      "closePrice": 0.1327,
-      "leverage": 10,
-      "pnl": -9.5672695064686,
-      "pnlPct": -22.107590272660094,
-      "reason": "SL",
-      "openTime": 1778855679593,
-      "closeTime": 1778918224961
-    },
-    {
-      "id": 1778855671150,
-      "symbol": "DOGEUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.1122,
-      "closePrice": 0.1099,
-      "leverage": 10,
-      "pnl": -15.770993520374647,
-      "pnlPct": -20.49910873440282,
-      "reason": "SL",
-      "openTime": 1778855671150,
-      "closeTime": 1778918224961
-    },
-    {
-      "id": 1778855668924,
-      "symbol": "XRPUSDT",
-      "direction": "LONG",
-      "entryPrice": 1.438,
-      "closePrice": 1.416,
-      "leverage": 10,
-      "pnl": -15.693745502284928,
-      "pnlPct": -15.299026425591114,
-      "reason": "SL",
-      "openTime": 1778855668924,
-      "closeTime": 1778918224961
-    },
-    {
-      "id": 1778855662339,
-      "symbol": "SOLUSDT",
-      "direction": "LONG",
-      "entryPrice": 89.11,
-      "closePrice": 87.39,
-      "leverage": 10,
-      "pnl": -26.399977131112305,
-      "pnlPct": -19.30198630905621,
-      "reason": "SL",
-      "openTime": 1778855662339,
-      "closeTime": 1778918224961
-    },
-    {
-      "id": 1778779562769,
-      "symbol": "BTCUSDT",
-      "direction": "SHORT",
-      "entryPrice": 81399.96,
-      "closePrice": 78355.79,
-      "leverage": 10,
-      "pnl": 33.93704776057189,
-      "pnlPct": 37.397684224906406,
-      "reason": "TP",
-      "openTime": 1778779562769,
-      "closeTime": 1778918224961
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778544614205,
-      "value": 895.8355893823654
-    },
-    {
-      "time": 1778558664233,
-      "value": 872.5516658586608
-    },
-    {
-      "time": 1778568497839,
-      "value": 881.660045147186
-    },
-    {
-      "time": 1778578360315,
-      "value": 258.8041104240713
-    },
-    {
-      "time": 1778578360315,
-      "value": 300.34074534406204
-    },
-    {
-      "time": 1778578396193,
-      "value": 853.4046843732847
-    },
-    {
-      "time": 1778585621935,
-      "value": 221.24546796048776
-    },
-    {
-      "time": 1778585621935,
-      "value": 261.31653124676683
-    },
-    {
-      "time": 1778585657810,
-      "value": 832.6166300399435
-    },
-    {
-      "time": 1778592326764,
-      "value": 825.5632241770099
-    },
-    {
-      "time": 1778601532899,
-      "value": 222.87392502906545
-    },
-    {
-      "time": 1778601532899,
-      "value": 261.3846234193693
-    },
     {
       "time": 1778601532899,
       "value": 307.11098428547945
@@ -4733,12 +4685,56 @@
     {
       "time": 1780666051877,
       "value": 532.222526808185
+    },
+    {
+      "time": 1780675927007,
+      "value": 52.305238131907814
+    },
+    {
+      "time": 1780675927008,
+      "value": 77.55979125752793
+    },
+    {
+      "time": 1780675927008,
+      "value": 151.2800659762991
+    },
+    {
+      "time": 1780675927008,
+      "value": 252.77350690408275
+    },
+    {
+      "time": 1780675927008,
+      "value": 329.66175798713016
+    },
+    {
+      "time": 1780675927008,
+      "value": 402.7158051433677
+    },
+    {
+      "time": 1780675927008,
+      "value": 447.65774540490634
+    },
+    {
+      "time": 1780675927008,
+      "value": 483.26457466991616
+    },
+    {
+      "time": 1780675927008,
+      "value": 505.70680948907807
+    },
+    {
+      "time": 1780675927008,
+      "value": 513.2385690628719
+    },
+    {
+      "time": 1780675967657,
+      "value": 513.2385690628718
     }
   ],
   "dailyStart": 71.50563966534926,
   "dailyStartTime": 1780617600000,
-  "totalTrades": 321,
-  "wins": 118,
+  "totalTrades": 331,
+  "wins": 124,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -4769,5 +4765,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-05T13:27:31.877Z"
+  "lastRun": "2026-06-05T16:12:47.657Z"
 }
