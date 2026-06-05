@@ -1,5 +1,5 @@
 {
-  "balance": 48.54902784537682,
+  "balance": 36.41177088403261,
   "initialBalance": 1000,
   "positions": [
     {
@@ -109,6 +109,18 @@
       "stopLossPrice": 45.137049999999995,
       "takeProfitPrice": 43.1359,
       "openTime": 1780654543096
+    },
+    {
+      "id": 1780666049876,
+      "symbol": "ATOMUSDT",
+      "direction": "LONG",
+      "entryPrice": 1.713,
+      "margin": 12.137256961344205,
+      "leverage": 10,
+      "size": 121.37256961344205,
+      "stopLossPrice": 1.687305,
+      "takeProfitPrice": 1.7643900000000001,
+      "openTime": 1780666049876
     }
   ],
   "history": [
@@ -4717,6 +4729,10 @@
     {
       "time": 1780654547314,
       "value": 531.1106357654309
+    },
+    {
+      "time": 1780666051877,
+      "value": 532.222526808185
     }
   ],
   "dailyStart": 71.50563966534926,
@@ -4753,5 +4769,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-05T10:15:47.314Z"
+  "lastRun": "2026-06-05T13:27:31.877Z"
 }
