@@ -1,5 +1,5 @@
 {
-  "balance": 357.42735641165257,
+  "balance": 113.09224948962446,
   "initialBalance": 1000,
   "positions": [
     {
@@ -73,6 +73,54 @@
       "stopLossPrice": 2.073645,
       "takeProfitPrice": 1.98171,
       "openTime": 1780695831114
+    },
+    {
+      "id": 1780699688555,
+      "symbol": "BTCUSDT",
+      "direction": "SHORT",
+      "entryPrice": 61682.51,
+      "margin": 89.35683910291314,
+      "leverage": 10,
+      "size": 893.5683910291314,
+      "stopLossPrice": 62607.74765,
+      "takeProfitPrice": 59832.034700000004,
+      "openTime": 1780699688555
+    },
+    {
+      "id": 1780699692179,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1595.27,
+      "margin": 67.01762932718486,
+      "leverage": 10,
+      "size": 670.1762932718486,
+      "stopLossPrice": 1619.1990499999997,
+      "takeProfitPrice": 1547.4118999999998,
+      "openTime": 1780699692179
+    },
+    {
+      "id": 1780699694415,
+      "symbol": "SOLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 64.45,
+      "margin": 50.26322199538865,
+      "leverage": 10,
+      "size": 502.6322199538865,
+      "stopLossPrice": 65.41675,
+      "takeProfitPrice": 62.5165,
+      "openTime": 1780699694415
+    },
+    {
+      "id": 1780699701182,
+      "symbol": "DOGEUSDT",
+      "direction": "SHORT",
+      "entryPrice": 0.08282,
+      "margin": 37.697416496541486,
+      "leverage": 10,
+      "size": 376.97416496541484,
+      "stopLossPrice": 0.08406229999999999,
+      "takeProfitPrice": 0.0803354,
+      "openTime": 1780699701182
     }
   ],
   "history": [
@@ -4681,6 +4729,10 @@
     {
       "time": 1780695854016,
       "value": 658.6530726147697
+    },
+    {
+      "time": 1780699725883,
+      "value": 687.0472629187007
     }
   ],
   "dailyStart": 71.50563966534926,
@@ -4717,5 +4769,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-05T21:44:14.017Z"
+  "lastRun": "2026-06-05T22:48:45.883Z"
 }
