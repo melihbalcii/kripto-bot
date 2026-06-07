@@ -1,5 +1,5 @@
 {
-  "balance": 163.71246262247732,
+  "balance": 122.78434696685798,
   "initialBalance": 1000,
   "positions": [
     {
@@ -109,6 +109,18 @@
       "stopLossPrice": 0.1675765,
       "takeProfitPrice": 0.16014699999999998,
       "openTime": 1780824920975
+    },
+    {
+      "id": 1780848664902,
+      "symbol": "SOLUSDT",
+      "direction": "SHORT",
+      "entryPrice": 64.96,
+      "margin": 40.92811565561933,
+      "leverage": 10,
+      "size": 409.2811565561933,
+      "stopLossPrice": 65.93439999999998,
+      "takeProfitPrice": 63.011199999999995,
+      "openTime": 1780848664902
     }
   ],
   "history": [
@@ -4717,6 +4729,10 @@
     {
       "time": 1780844163324,
       "value": 828.7098084961676
+    },
+    {
+      "time": 1780848697357,
+      "value": 821.5522600304632
     }
   ],
   "dailyStart": 151.3441704977469,
@@ -4753,5 +4769,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-07T14:56:03.324Z"
+  "lastRun": "2026-06-07T16:11:37.357Z"
 }
