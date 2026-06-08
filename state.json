@@ -1,5 +1,5 @@
 {
-  "balance": 164.8529310900464,
+  "balance": 242.52013032242377,
   "initialBalance": 1000,
   "positions": [
     {
@@ -25,18 +25,6 @@
       "stopLossPrice": 64101.96975,
       "takeProfitPrice": 61260.0105,
       "openTime": 1780872285339
-    },
-    {
-      "id": 1780872287518,
-      "symbol": "ETHUSDT",
-      "direction": "SHORT",
-      "entryPrice": 1680.76,
-      "margin": 121.78420681723117,
-      "leverage": 10,
-      "size": 1217.8420681723117,
-      "stopLossPrice": 1705.9714,
-      "takeProfitPrice": 1630.3372,
-      "openTime": 1780872287518
     },
     {
       "id": 1780872291980,
@@ -75,18 +63,6 @@
       "openTime": 1780922780076
     },
     {
-      "id": 1780937135079,
-      "symbol": "NEARUSDT",
-      "direction": "SHORT",
-      "entryPrice": 2.23,
-      "margin": 41.99055015666261,
-      "leverage": 10,
-      "size": 419.90550156662607,
-      "stopLossPrice": 2.2634499999999997,
-      "takeProfitPrice": 2.1631,
-      "openTime": 1780937135079
-    },
-    {
       "id": 1780937145034,
       "symbol": "ADAUSDT",
       "direction": "SHORT",
@@ -109,9 +85,47 @@
       "stopLossPrice": 1.8188799999999998,
       "takeProfitPrice": 1.73824,
       "openTime": 1780946320046
+    },
+    {
+      "id": 1780953620473,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1708.04,
+      "margin": 80.84004344080792,
+      "leverage": 10,
+      "size": 808.4004344080791,
+      "stopLossPrice": 1733.6605999999997,
+      "takeProfitPrice": 1656.7988,
+      "openTime": 1780953620473
     }
   ],
   "history": [
+    {
+      "id": 1780937135079,
+      "symbol": "NEARUSDT",
+      "direction": "SHORT",
+      "entryPrice": 2.23,
+      "closePrice": 2.153,
+      "leverage": 10,
+      "pnl": 14.498979202076319,
+      "pnlPct": 34.52914798206276,
+      "reason": "TP",
+      "openTime": 1780937135079,
+      "closeTime": 1780953617975
+    },
+    {
+      "id": 1780872287518,
+      "symbol": "ETHUSDT",
+      "direction": "SHORT",
+      "entryPrice": 1680.76,
+      "closePrice": 1708.04,
+      "leverage": 10,
+      "pnl": -19.76649350278483,
+      "pnlPct": -16.230752754706188,
+      "reason": "SL",
+      "openTime": 1780872287518,
+      "closeTime": 1780953617975
+    },
     {
       "id": 1780922775678,
       "symbol": "POLUSDT",
@@ -2685,47 +2699,9 @@
       "reason": "TP",
       "openTime": 1779523882186,
       "closeTime": 1779561832604
-    },
-    {
-      "id": 1779523875518,
-      "symbol": "SOLUSDT",
-      "direction": "LONG",
-      "entryPrice": 82.28,
-      "closePrice": 84.89,
-      "leverage": 10,
-      "pnl": 26.028784143317022,
-      "pnlPct": 31.720952843947494,
-      "reason": "TP",
-      "openTime": 1779523875518,
-      "closeTime": 1779561832603
-    },
-    {
-      "id": 1779523889766,
-      "symbol": "OPUSDT",
-      "direction": "LONG",
-      "entryPrice": 0.123,
-      "closePrice": 0.1273,
-      "leverage": 10,
-      "pnl": 6.807338058618325,
-      "pnlPct": 34.95934959349592,
-      "reason": "TP",
-      "openTime": 1779523889766,
-      "closeTime": 1779558192033
     }
   ],
   "balanceHistory": [
-    {
-      "time": 1778928565335,
-      "value": 776.2969139548144
-    },
-    {
-      "time": 1778931984303,
-      "value": 795.9235211189128
-    },
-    {
-      "time": 1778937123554,
-      "value": 784.5422235906342
-    },
     {
       "time": 1778942220034,
       "value": 792.4598131090459
@@ -4717,12 +4693,24 @@
     {
       "time": 1780946322046,
       "value": 751.3332183879154
+    },
+    {
+      "time": 1780953617975,
+      "value": 266.87064440449274
+    },
+    {
+      "time": 1780953617975,
+      "value": 323.36017376323167
+    },
+    {
+      "time": 1780953655175,
+      "value": 723.7186848688383
     }
   ],
   "dailyStart": 86.69988942359524,
   "dailyStartTime": 1780876800000,
-  "totalTrades": 382,
-  "wins": 151,
+  "totalTrades": 384,
+  "wins": 152,
   "config": {
     "leverage": 10,
     "stopLoss": 1.5,
@@ -4753,5 +4741,5 @@
       "ATOMUSDT"
     ]
   },
-  "lastRun": "2026-06-08T19:18:42.046Z"
+  "lastRun": "2026-06-08T21:20:55.175Z"
 }
